@@ -7,89 +7,1135 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <title>GardaVoyager</title>
 
-  <title>Simple Sidebar - Start Bootstrap Template</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-  <!-- Custom styles for this template -->
-  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <link href="vendor/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+  <link href="vendor/owlcarousel/owl.theme.default.min.css" rel="stylesheet">
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="css/creative.min.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body id="page-top">
 
-  <div class="d-flex" id="wrapper">
-
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Start Bootstrap </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
-      </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
+  <!-- Navigation -->
+  <header class="site-header d-none d-lg-block">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-1">
+          <div class="site-logo">
+            <a href="/"><img src="img/logo.svg"></a>
+          </div>
         </div>
-      </nav>
-
-      <div class="container-fluid">
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+        <div class="col-5 col-lg-5">
+          <div class="site-search">
+            <div class="row itemsOfSearch">
+              <div class="col-12">
+                <div class="search-div">
+                  <div class="icon">
+                    <svg viewBox="0 0 16 16" role="presentation" aria-hidden="true" focusable="false" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m2.5 7c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5m13.1 6.9-2.8-2.9c.7-1.1 1.2-2.5 1.2-4 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.5 0 2.9-.5 4-1.2l2.9 2.8c.2.3.5.4.9.4.3 0 .6-.1.8-.4.5-.5.5-1.2 0-1.7"></path></svg>
+                  </div>
+                  <input placeholder="Scegli una destinazione" type="text" name="paese1" id="autocomplete"/>
+                  <div class="suggestions-1 suggest"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-overlay">
+            <div class="overlay-search__wrapper">
+              <div class="search-cat">
+                <div class="title-search-cat">Esplora le esperienze</div>
+                <div class="row row-cat-search">
+                  <div class="col-4">
+                    <div class="cat-search-item">
+                      <h5>Tour in barca</h5>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="cat-search-item">
+                      <h5>Vini e dintorni</h5>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="cat-search-item">
+                      <h5>Tracking</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-cat">
+                <div class="title-search-cat">I luoghi più cercati</div>
+                <div class="row row-cat-search">
+                  <div class="col-4">
+                    <div class="cat-search-item item-search-with-img" style="background-image:url(../img/places/peschiera-del-garda-4344483_640.jpg)">
+                      <h5>Peschiera del garda</h5>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="cat-search-item item-search-with-img" style="background-image:url(../img/places/sirmione-3781251_640.jpg)">
+                      <h5>Sirmione</h5>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="cat-search-item item-search-with-img" style="background-image:url(../img/places/lemon-on-garda-3824239_640.jpg)">
+                      <h5>Limone</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-cat">
+                <div class="title-search-cat">Scegli una data</div>
+                <div class="date-mobile-search">
+                  <input id="date-input-mobile" placeholder="Scegli una data e controlla la disponibilità" type="text">
+                </div>
+              </div>
+              <div class="apply-search">
+                <button class="btn-apply-search">Applica</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-6">
+          <div class="row align-items-center">
+            <div class="col-9">
+              <div class="site-nav-wrapper d-flex justify-content-center">
+                <nav class="site-nav">
+                  <ul>
+                    <li>
+                      <a href="/tour-barca.html">Tour in barca</a>
+                    </li>
+                    <li>
+                      <a href="#">Tour in bus</a>
+                    </li>
+                    <li>
+                      <a href="#">Biglietti</a>
+                    </li>
+                    <li>
+                      <a href="/esperienze.html">Esperienze</a>
+                    </li>
+                    <li>
+                      <a href="/discover.html">Discover</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="cart-header">
+                <div class="cart-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 55 68.75" style="enable-background:new 0 0 55 55;" xml:space="preserve"><g><g><path d="M40.9335938,52H14.0664063c-1.8359375,0-3.3945313-1.3129883-3.7080078-3.1220703L6.1835938,24.7177734    c-0.0244141-0.1450195,0.015625-0.2939453,0.1103516-0.4072266c0.0957031-0.112793,0.2353516-0.1777344,0.3828125-0.1777344    h41.6474609c0.1474609,0,0.2871094,0.0649414,0.3828125,0.1777344c0.0947266,0.1132813,0.1347656,0.262207,0.1103516,0.4072266    l-4.1748047,24.1601563C44.3291016,50.6870117,42.7695313,52,40.9335938,52z M7.2705078,25.1328125l4.0742188,23.5751953    C11.5742188,50.0361328,12.71875,51,14.0664063,51h26.8671875c1.3486328,0,2.4931641-0.9638672,2.7226563-2.2919922    l4.0742188-23.5751953H7.2705078z"/></g><g><path d="M48.4765625,25.1328125H6.5234375c-1.9980469,0-3.6240234-1.6259766-3.6240234-3.6245117    s1.6259766-3.6245117,3.6240234-3.6245117h41.953125c1.9980469,0,3.6240234,1.6259766,3.6240234,3.6245117    S50.4746094,25.1328125,48.4765625,25.1328125z M6.5234375,18.8837891c-1.4472656,0-2.6240234,1.1772461-2.6240234,2.6245117    s1.1767578,2.6245117,2.6240234,2.6245117h41.953125c1.4472656,0,2.6240234-1.1772461,2.6240234-2.6245117    s-1.1767578-2.6245117-2.6240234-2.6245117H6.5234375z"/></g><g><g><path d="M16.7822266,46.5507813c-0.234375,0-0.4443359-0.1660156-0.4902344-0.4052734l-3.0742188-15.96875     c-0.0517578-0.2714844,0.1259766-0.5336914,0.3964844-0.5859375c0.265625-0.0473633,0.5341797,0.1240234,0.5859375,0.3964844     l3.0742188,15.96875c0.0517578,0.2714844-0.1259766,0.5336914-0.3964844,0.5859375     C16.8457031,46.5478516,16.8144531,46.5507813,16.7822266,46.5507813z"/></g><g><path d="M22.140625,46.5507813c-0.2539063,0-0.4716797-0.1933594-0.4970703-0.4521484l-1.5371094-15.96875     c-0.0263672-0.2749023,0.1748047-0.519043,0.4501953-0.5454102c0.2773438-0.0224609,0.5185547,0.1743164,0.5458984,0.449707     l1.5371094,15.96875c0.0263672,0.2749023-0.1748047,0.519043-0.4501953,0.5454102     C22.1728516,46.5498047,22.1572266,46.5507813,22.140625,46.5507813z"/></g><g><path d="M27.5,46.5507813c-0.2763672,0-0.5-0.2236328-0.5-0.5v-15.96875c0-0.2763672,0.2236328-0.5,0.5-0.5     s0.5,0.2236328,0.5,0.5v15.96875C28,46.3271484,27.7763672,46.5507813,27.5,46.5507813z"/></g><g><path d="M32.859375,46.5507813c-0.0166016,0-0.0322266-0.0009766-0.0488281-0.0024414     c-0.2753906-0.0263672-0.4765625-0.2705078-0.4501953-0.5454102l1.5371094-15.96875     c0.0273438-0.2753906,0.2783203-0.4731445,0.5458984-0.449707c0.2753906,0.0263672,0.4765625,0.2705078,0.4501953,0.5454102     l-1.5371094,15.96875C33.3310547,46.3574219,33.1132813,46.5507813,32.859375,46.5507813z"/></g><g><path d="M38.2177734,46.5507813c-0.0322266,0-0.0634766-0.0029297-0.0957031-0.0087891     c-0.2705078-0.0522461-0.4482422-0.3144531-0.3964844-0.5859375l3.0751953-15.96875     c0.0517578-0.2724609,0.3154297-0.4448242,0.5859375-0.3964844c0.2705078,0.0522461,0.4482422,0.3144531,0.3964844,0.5859375     l-3.0751953,15.96875C38.6621094,46.3847656,38.4521484,46.5507813,38.2177734,46.5507813z"/></g></g><g><path d="M27.5,9.9399414c-1.9130859,0-3.4697266-1.5566406-3.4697266-3.4697266C24.0302734,4.5566406,25.5869141,3,27.5,3    s3.4697266,1.5566406,3.4697266,3.4702148C30.9697266,8.3833008,29.4130859,9.9399414,27.5,9.9399414z M27.5,4    c-1.3613281,0-2.4697266,1.1079102-2.4697266,2.4702148c0,1.3618164,1.1083984,2.4697266,2.4697266,2.4697266    s2.4697266-1.1079102,2.4697266-2.4697266C29.9697266,5.1079102,28.8613281,4,27.5,4z"/></g><g><path d="M11.3876953,18.8837891c-0.1357422,0-0.2714844-0.0551758-0.3701172-0.1640625    c-0.1855469-0.2045898-0.1699219-0.5209961,0.0341797-0.706543L24.1943359,6.0996094    c0.2041016-0.184082,0.5214844-0.1699219,0.7060547,0.034668c0.1855469,0.2045898,0.1699219,0.5209961-0.0341797,0.706543    L11.7236328,18.7543945C11.6279297,18.8408203,11.5078125,18.8837891,11.3876953,18.8837891z"/></g><g><path d="M43.6132813,18.8837891c-0.1201172,0-0.2402344-0.0429688-0.3359375-0.1293945L30.1337891,6.8408203    c-0.2041016-0.1855469-0.2197266-0.5019531-0.0341797-0.706543s0.5029297-0.21875,0.7060547-0.034668l13.1435547,11.9135742    c0.2041016,0.1855469,0.2197266,0.5019531,0.0341797,0.706543C43.8847656,18.8286133,43.7490234,18.8837891,43.6132813,18.8837891    z"/></g></g></svg>
+                </div>
+                <div class="cart-text">Carrello</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- /#page-content-wrapper -->
-
+  </header>
+  <header class="header-mobile d-lg-none">
+    <div class="container-fluid">
+      <div class="mobile-header-wrapper">
+        <div class="site-logo">
+          <a href="/">
+            <img src="img/logo.svg">
+          </a>
+        </div>
+        <div class="site-search">
+          <div class="search-div">
+            <div class="icon">
+              <svg viewBox="0 0 16 16" role="presentation" aria-hidden="true" focusable="false" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m2.5 7c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5m13.1 6.9-2.8-2.9c.7-1.1 1.2-2.5 1.2-4 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.5 0 2.9-.5 4-1.2l2.9 2.8c.2.3.5.4.9.4.3 0 .6-.1.8-.4.5-.5.5-1.2 0-1.7"></path></svg>
+            </div>
+            <input placeholder="Scegli una destinazione" type="text" name="paese" id="autocomplete2"/>
+            <div class="suggestions-2 suggest"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="bottom-nav-bar d-lg-none">
+    <nav class="mobile-bottom">
+      <ul>
+        <li>
+          <a href="/tour-barca.html">
+            <div class="bottom-nav-icon">
+              <img src="../img/icon/boat.svg">
+            </div>
+            <p>Tour in Barca</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="bottom-nav-icon">
+              <img src="../img/icon/bus.svg">
+            </div>
+            <p>Tour in Bus</p>
+          </a>
+        </li>
+        <li>
+          <a href="/esperienze.html">
+            <div class="bottom-nav-icon">
+              <img src="../img/icon/experience.svg">
+            </div>
+            <p>Esperienze</p>
+          </a>
+        </li>
+        <li>
+          <a href="/discover.html">
+            <div class="bottom-nav-icon">
+              <img src="../img/icon/discover.svg">
+            </div>
+            <p>Luoghi</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <!-- /#wrapper -->
+  <div class="header-bottom">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-11 offset-1">
+          <div class="search-filter">
+            <div class="item-filter">
+              <button class="filter-btn">Esperienze</button>
+              <div class="filter-poupop">
+                <div class="filter-poupop-wrapper">
+                  <div class="filter-poupop-content">
+                    <div class="row">
+
+                      <div class="col-6">
+                        <div class="checkbox">
+                          <input type='checkbox' class="filter-checkbox" name='esperienze1' value='valuable' id="esperienze1"/>
+                          <label for="esperienze1"></label>
+                          <label for="esperienze1" class="checkbox-text">Musei</label>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="checkbox">
+                          <input type='checkbox' class="filter-checkbox" name='esperienze2' value='valuable' id="esperienze2"/>
+                          <label for="esperienze2"></label>
+                          <label for="esperienze2" class="checkbox-text">Avventure</label>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="checkbox">
+                          <input type='checkbox' class="filter-checkbox" name='esperienze3' value='valuable' id="esperienze3"/>
+                          <label for="esperienze3"></label>
+                          <label for="esperienze3" class="checkbox-text">Disco e bar</label>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="checkbox">
+                          <input type='checkbox' class="filter-checkbox" name='esperienze4' value='valuable' id="esperienze4"/>
+                          <label for="esperienze4"></label>
+                          <label for="esperienze4" class="checkbox-text">Per coppie</label>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="checkbox">
+                          <input type='checkbox' class="filter-checkbox" name='esperienze5' value='valuable' id="esperienze5"/>
+                          <label for="esperienze5"></label>
+                          <label for="esperienze5" class="checkbox-text">Relax</label>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="checkbox">
+                          <input type='checkbox' class="filter-checkbox" name='esperienze6' value='valuable' id="esperienze6"/>
+                          <label for="esperienze6"></label>
+                          <label for="esperienze6" class="checkbox-text">Sport</label>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="checkbox">
+                          <input type='checkbox' class="filter-checkbox" name='esperienze7' value='valuable' id="esperienze7"/>
+                          <label for="esperienze7"></label>
+                          <label for="esperienze7" class="checkbox-text">Shopping</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-footer">
+                    <div class="d-flex">
+                      <button class="remove-filter">Cancella</button>
+                      <button class="save-filter">Salva</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-filter">
+              <button class="filter-btn option-filter">Tour in barca</button>
+            </div>
+            <div class="item-filter">
+              <button class="filter-btn option-filter">Tour in città</button>
+            </div>
+            <div class="item-filter">
+              <button class="filter-btn option-filter">Biglietti</button>
+            </div>
+            <div class="item-filter">
+              <button class="filter-btn">
+                <input id="date-search" class="datedropper-init" type="text" placeholder="Data">
+              </button>
+            </div>
+            <div class="item-filter">
+              <button class="filter-btn">Prezzo</button>
+              <div class="filter-poupop">
+                <div class="filter-poupop-wrapper">
+                  <div class="filter-poupop-content">
+                    <div class="row price-filter">
+                      <div class="col-12">
+                        <div class="price-slider">
+                          <div class="price-range">
+                            <input value="0" min="0" max="400" step="1" type="range"/>
+                            <input value="400" min="0" max="400" step="1" type="range"/>
+                          </div>
+                          <div class="value-slider">
+                            <div class="row">
+                              <div class="col-6">
+                                <span>
+                                  <span class="label-range-price">Prezzo minimo</span>
+                                  <input type="number" value="0" min="0" max="400"/>
+                                </span>
+                              </div>
+                              <div class="col-6">
+                                <span>
+                                  <span class="label-range-price">Prezzo massimo</span>
+                                  <input type="number" value="400" min="0" max="400"/>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-footer">
+                    <div class="d-flex">
+                      <button class="remove-filter">Cancella</button>
+                      <button class="save-filter">Salva</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom-mobile">
+    <div class="filters-mobile-btn">
+      <div class="mobile-btn-filter">
+        <button class="filter-btn-mobile btn-expe">Esperienze</button>
+      </div>
+      <div class="mobile-btn-filter">
+        <button class="filter-btn-mobile option-filter">Tour in barca</button>
+      </div>
+      <div class="mobile-btn-filter">
+        <button class="filter-btn-mobile option-filter">Tour in città</button>
+      </div>
+      <div class="mobile-btn-filter">
+        <button class="filter-btn-mobile option-filter">Biglietti</button>
+      </div>
+      <div class="mobile-btn-filter">
+        <button class="filter-btn-mobile"><input id="date-search2" class="datedropper-init" type="text" placeholder="Data"></button>
+      </div>
+      <div class="mobile-btn-filter">
+        <button class="filter-btn-mobile btn-price">Prezzo</button>
+      </div>
+    </div>
+  </div>
+  <div class="poupop-mobile poupop-filter-m-expe">
+    <div class="mobile-poupop-wrapper">
+      <div class="filter-poupop-content">
+        <div class="row">
+
+          <div class="col-6">
+            <div class="checkbox">
+              <input type='checkbox' class="filter-checkbox" name='esperienze11' value='valuable' id="esperienze11"/>
+              <label for="esperienze11"></label>
+              <label for="esperienze11" class="checkbox-text">Musei</label>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="checkbox">
+              <input type='checkbox' class="filter-checkbox" name='esperienze12' value='valuable' id="esperienze12"/>
+              <label for="esperienze12"></label>
+              <label for="esperienze12" class="checkbox-text">Avventure</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="checkbox">
+              <input type='checkbox' class="filter-checkbox" name='esperienze13' value='valuable' id="esperienze13"/>
+              <label for="esperienze13"></label>
+              <label for="esperienze13" class="checkbox-text">Disco e bar</label>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="checkbox">
+              <input type='checkbox' class="filter-checkbox" name='esperienze14' value='valuable' id="esperienze14"/>
+              <label for="esperienze14"></label>
+              <label for="esperienze14" class="checkbox-text">Per coppie</label>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="checkbox">
+              <input type='checkbox' class="filter-checkbox" name='esperienze15' value='valuable' id="esperienze15"/>
+              <label for="esperienze15"></label>
+              <label for="esperienze15" class="checkbox-text">Relax</label>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="checkbox">
+              <input type='checkbox' class="filter-checkbox" name='esperienze16' value='valuable' id="esperienze16"/>
+              <label for="esperienze16"></label>
+              <label for="esperienze16" class="checkbox-text">Sport</label>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="checkbox">
+              <input type='checkbox' class="filter-checkbox" name='esperienze17' value='valuable' id="esperienze17"/>
+              <label for="esperienze17"></label>
+              <label for="esperienze17" class="checkbox-text">Shopping</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-footer">
+        <div class="d-flex">
+          <button class="remove-filter">Cancella</button>
+          <button class="save-filter">Salva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="poupop-mobile poupop-filter-m-price">
+    <div class="mobile-poupop-wrapper">
+      <div class="filter-poupop-content">
+        <div class="row price-filter">
+          <div class="col-12">
+            <div class="price-slider">
+              <div class="price-range">
+                <input value="0" min="0" max="400" step="1" type="range"/>
+                <input value="400" min="0" max="400" step="1" type="range"/>
+              </div>
+              <div class="value-slider">
+                <div class="row">
+                  <div class="col-6">
+                    <span>
+                      <span class="label-range-price">Prezzo minimo</span>
+                      <input type="number" value="0" min="0" max="400"/>
+                    </span>
+                  </div>
+                  <div class="col-6">
+                    <span>
+                      <span class="label-range-price">Prezzo massimo</span>
+                      <input type="number" value="400" min="0" max="400"/>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-footer">
+        <div class="d-flex">
+          <button class="remove-filter">Cancella</button>
+          <button class="save-filter">Salva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Masthead -->
+
+  <div class="featured-section">
+    <div class="container">
+      <div class="title-featured text-center">
+        <h1>Vivi il lago di Garda <br>come lo viviamo noi.</h1>
+      </div>
+      <div class="tabs-featured">
+
+          <section class="tabs">
+            <ul class="tab-control"> 
+              <li class="tab active-tab"><h3>Tour</h3></li>
+              <li class="tab"><h3>Esperienze</h3></li>
+            </ul>
+              
+            <div class="tab-content">
+                <div class="content active">
+                  <div class="owl-carousel owl-theme carosello-tab items-tab">
+
+                    <div class="item-tab item">
+                      <a href="experience-single.html">
+                        <div class="item-tabs-wrapper">
+                          <img src="../img/tabs/tabs-2.jpg">
+                          <div class="top-info">
+                            <p>Tour in barca</p>
+                          </div>
+                          <div class="top-bottom">
+                            <p>Isola del Garda</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="item-tab item">
+                      <a href="experience-single.html">
+                        <div class="item-tabs-wrapper">
+                          <img src="../img/tabs/tabs-3.jpg">
+                          <div class="top-info">
+                            <p>Tour in barca</p>
+                          </div>
+                          <div class="top-bottom">
+                            <p>Limone e Malcesine from Riva</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="item-tab item">
+                      <a href="experience-single.html">
+                        <div class="item-tabs-wrapper">
+                          <img src="../img/tabs/tabs-1.jpg">
+                          <div class="top-info">
+                            <p>Tour in bus</p>
+                          </div>
+                          <div class="top-bottom">
+                            <p>Lake Tour</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="owl-carousel owl-theme carosello-tab items-tab">
+
+                    <div class="item-tab item">
+                      <a href="experience-single.html">
+                        <div class="item-tabs-wrapper">
+                          <img src="../img/tabs/tabs-6.jpg">
+                          <div class="top-info">
+                            <p>Trike</p>
+                          </div>
+                          <div class="top-bottom">
+                            <p>Trike Tour</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="item-tab item">
+                      <a href="experience-single.html">
+                        <div class="item-tabs-wrapper">
+                          <img src="../img/tabs/tabs-4.jpg">
+                          <div class="top-info">
+                            <p>Bike</p>
+                          </div>
+                          <div class="top-bottom">
+                            <p>Bike Tour</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="item-tab item">
+                      <a href="experience-single.html">
+                        <div class="item-tabs-wrapper">
+                          <img src="../img/tabs/tabs-5.jpg">
+                          <div class="top-info">
+                            <p>Tracking</p>
+                          </div>
+                          <div class="top-bottom">
+                            <p>Lake Tour</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+             </div>
+            </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="featured-categories bg-grey">
+    <div class="container">
+      <div class="title-section text-center">
+        <h3>Cosa fare? Prendi ispirazione.</h3>
+      </div>
+      <div class="featured-categories-grid">
+        <div class="row">
+
+          <div class="col-12 col-md-4">
+            <div class="card-categories">
+              <div class="card-categories-photo">
+                <img src="../img/tabs/verona.jpg">
+                <h3>Tour in città</h3>
+              </div>
+              <div class="card-categories-details">
+                <p class="subtitle-card">Oltre 30 attività da scegliere</p>
+                <h3 class="title-card">Tour in città</h3>
+                <p class="content-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card-categories">
+              <div class="card-categories-photo">
+                <img src="../img/tabs/coppie.jpg">
+                <h3>Attività per coppie</h3>
+              </div>
+              <div class="card-categories-details">
+                <p class="subtitle-card">Oltre 50 attività da scegliere</p>
+                <h3 class="title-card">Attività per coppie</h3>
+                <p class="content-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card-categories">
+              <a href="/percorsi-gusto.html">
+                <div class="card-categories-photo">
+                  <img src="../img/experience/restaurant-691397_1920.jpg">
+                  <h3>Esperienze di gusto</h3>
+                </div>
+                <div class="card-categories-details">
+                  <p class="subtitle-card">Oltre 20 attività da scegliere</p>
+                  <h3 class="title-card">Esperienze di gusto</h3>
+                  <p class="content-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="home-grid-categories bg-grey">
+    <div class="container">
+      <div class="title-section text-center">
+        <h3>Cosa fare? Prendi ispirazione.</h3>
+      </div>
+      <div class="grid-card-categories">
+
+        <div class="row">
+
+          <div class="col-7">
+
+            <div class="row">
+              <div class="col-6">
+                <div class="card-duplex">
+                  <div class="card-photo">
+                    <img src="/img/tabs/tabs-8.jpg">
+                  </div>
+                  <div class="card-behind">
+                    <div class="card-bottom">
+                      <p class="card-label">In evidenza</p>
+                      <h3>Tour bus</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-duplex">
+                  <div class="card-photo">
+                    <img src="/img/tabs/tabs-2.jpg">
+                  </div>
+                  <div class="card-behind">
+                    <div class="card-bottom">
+                      <p class="card-label">In evidenza</p>
+                      <h3>Tour barca</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-5">
+
+            <div class="grid-h-3">
+              <div class="card-horizzontal">
+                <a href="/percorsi-gusto.html">
+                  <img src="/img/tabs/tabs-3.jpg">
+                  <div class="card-bottom">
+                    <h3>Percorso di gusto</h3>
+                    <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="grid-h-3">
+              <div class="card-horizzontal">
+                <img src="/img/tabs/tabs-7.jpg">
+                <div class="card-bottom">
+                  <h3>Arrampicata</h3>
+                  <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-h-3">
+              <div class="card-horizzontal">
+                <img src="/img/tabs/tabs-5.jpg">
+                <div class="card-bottom">
+                  <h3>Montagna</h3>
+                  <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  <div class="featured-experience">
+    <div class="container">
+      <div class="title-section text-center">
+        <h3>Lasciati consigliare.</h3>
+      </div>
+      <div class="featured-grid-experience">
+        <div class="title-small">
+          <h3>Oggi piove? Niente paura.</h3>
+        </div>
+        <div class="card-container card-dummy-carousel owl-carousel owl-theme">
+
+          <div class="item card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-1.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-2.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-3.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-4.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-5.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="item card-dummy card-dummy-sponsor">
+            <div class="card-photo">
+              <img src="img/tabs/promo.jpg">
+            </div>
+            <div class="card-content">
+              <div class="card-info">
+                <div class="card-sponsor-subtitle">Banner promozionale</div>
+                <div class="card-title">
+                  <h5>wwww.noleggiare.it</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="featured-grid-experience">
+        <div class="title-small">
+          <h3>Esperienze adatte anche ai più piccoli.</h3>
+        </div>
+        <div class="card-container">
+
+          <div class="card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-8.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-7.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-3.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-2.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="card-dummy">
+            <a href="/experience-single.html">
+              <div class="card-photo">
+                <img src="../img/experience/immagini-5.jpg">
+              </div>
+              <div class="card-content">
+                <div class="card-info">
+                  <div class="card-category">Museo</div>
+                  <div class="card-title">
+                    <h5>Museo di verona</h5>
+                  </div>
+                  <div class="card-time">6 ore</div>
+                </div>
+                <div class="card-price">
+                  <span class="from-price">da </span><span class="price">45 €</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="card-dummy card-dummy-sponsor">
+            <div class="card-photo">
+              <img src="img/tabs/promo2.jpg">
+            </div>
+            <div class="card-content">
+              <div class="card-info">
+                <div class="card-sponsor-subtitle">Banner promozionale</div>
+                <div class="card-title">
+                  <h5>wwww.dechatlon.it</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <section class="featured-posts">
+    <div class="container">
+      <div class="title-section text-center">
+        <h3>A day in</h3>
+      </div>
+      <div class="container-posts">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="post-item">
+              <div class="post-photo">
+                <img src="/img/posts/post-1.jpg">
+              </div>
+              <div class="post-preview">
+                <div class="post-title">
+                  <h3>Cosa fare a Peschiera del Garda?</h3>
+                </div>
+                <div class="post-excerpt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </div>
+                <div class="post-link">
+                  <a href="#">Scopri di più</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="post-item">
+              <div class="post-photo">
+                <img src="/img/posts/post-2.jpg">
+              </div>
+              <div class="post-preview">
+                <div class="post-title">
+                  <h3>Le meraviglie di Sirmione</h3>
+                </div>
+                <div class="post-excerpt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </div>
+                <div class="post-link">
+                  <a href="#">Scopri di più</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="post-item">
+              <div class="post-photo">
+                <img src="/img/posts/post-3.jpg">
+              </div>
+              <div class="post-preview">
+                <div class="post-title">
+                  <h3>Divertiti a Riva del Garda</h3>
+                </div>
+                <div class="post-excerpt">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </div>
+                <div class="post-link">
+                  <a href="#">Scopri di più</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="container-small">
+        <div class="line-footer"></div>
+        <div class="row footer-top">
+          <div class="col-12 col-md-4 col-lg-3">
+            <div class="footer-logo">
+              <a href="/">
+                <img src="img/logo-footer.svg">
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 offset-lg-3 footer-inner-col">
+            <div class="footer-title">
+              <p>Informazioni</p>
+            </div>
+            <nav class="nav-footer">
+              <ul>
+                <li><a href="#">Chi siamo</a></li>
+                <li><a href="#">Condizioni d'uso</a></li>
+                <li><a href="#">Pagamenti</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 footer-inner-col">
+            <div class="footer-title">
+              <p>Azienda</p>
+            </div>
+            <div class="info-aziendali">
+              <p class="nome-azidenda">BESTPLAN BY GARDAVOYAGER S.R.L.S.</p>
+              <div class="indirizzo">
+                <p>Corso Mazzini, 77 - 37012 Bussolengo VR (IT)</p>
+              </div>
+              <div class="phone">
+                <p><span>Supporto</span><br>+39 389 5099115<br>booking@gardavoyager.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-footer"></div>
+        <div class="row row-bottom">
+          <div class="col-12 col-md-8 col-lg-4">
+            <p class="copyright">©2019 GARDAVOYAGER S.R.L.S. Tutti i diritti riservati.<br>Corso G.Mazzini,116 37012 - Bussolengo VR</p>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 offset-lg-5">
+            <nav class="footer-social">
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Menu Toggle Script -->
+  <!-- Plugin JavaScript -->
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js'></script>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js'></script>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js'></script>
+  <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js'></script>
+  <script src="https://cdn.datedropper.com/get/977nh5tt70j9ghcri0ezpm491mabl555"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+  <script src="vendor/sticky-sidebar/sticky-sidebar.min.js"></script>
+  <script src="vendor/ajax-autocomplete/jquery.autocomplete.min.js"></script>
+  <script src="vendor/classie.js"></script>
+  <script src="vendor/selectFx.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.js"></script>
   <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
+    var parent=document.querySelector(".price-slider"),rangeS=parent.querySelectorAll("input[type=range]"),numberS=parent.querySelectorAll("input[type=number]");rangeS.forEach(function(e){e.oninput=function(){var e=parseFloat(rangeS[0].value),r=parseFloat(rangeS[1].value);e>r&&([e,r]=[r,e]),numberS[0].value=e,numberS[1].value=r}}),numberS.forEach(function(e){e.oninput=function(){var e=parseFloat(numberS[0].value),r=parseFloat(numberS[1].value);if(e>r){var a=e;numberS[0].value=r,numberS[1].value=a}rangeS[0].value=e,rangeS[1].value=r}});
   </script>
 
 </body>
