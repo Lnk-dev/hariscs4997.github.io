@@ -15,10 +15,9 @@
 .banner{
     background-image: url(../images/banner.png);
     background-color: #cccccc;
-    height: 600px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     position: relative;
     padding: 6em 0 9em 0;
 }
