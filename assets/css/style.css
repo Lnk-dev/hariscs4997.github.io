@@ -15,12 +15,14 @@
 .banner{
     background-image: url(../images/banner.png);
     background-color: #cccccc;
-    height: 600px;
+    height: 750px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     padding: 6em 0 9em 0;
+    display: flex;
+    align-items: center;
 }
 .banner h1{
   font-family: Roboto-Bold;
@@ -398,6 +400,17 @@ a.animated-button.victoria-one:after {
   background-color: #74c992;
 }
 
+.padding-r{
+  padding-right: 0px;
+}
+.padding-l{
+  padding-left: 0px;
+}
+
+
+
+
+
 /* footer */
 .footer{
   background-image: url(../images/footer.png);
@@ -443,5 +456,21 @@ a.animated-button.victoria-one:after {
   }
   .banner-content p{
     font-size: 16px;
+  }
+  .banner-content .buttons{
+    justify-content: center;
+  }
+  .padding-r{
+    padding-right: 15px;
+  }
+  .padding-l{
+    padding-left: 0px;
+  }
+  .detail{
+    padding: 30px 50px 0px 50px;
+  }
+
+  .footer{
+    padding: 3em 0 9em 0;
   }
 }
