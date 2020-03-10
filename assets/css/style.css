@@ -400,10 +400,9 @@ a.animated-button.victoria-one:after {
 /* footer */
 .footer{
   background-image: url(../images/footer.png);
-  height: 420px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   position: relative;
   padding: 6em 0 9em 0;
 }
