@@ -15,10 +15,9 @@
 .banner{
     background-image: url(../images/banner.png);
     background-color: #cccccc;
-    height: 750px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     position: relative;
     padding: 6em 0 9em 0;
     display: flex;
@@ -275,6 +274,9 @@ a.animated-button:link, a.animated-button:visited {
   font-weight: normal;
   font-size: 14px;
 }
+.lorem_text{
+  margin-top: 35px;
+}
 .lorem_text h2{
   font-family: Roboto-Bold;
   font-size: 24px;
@@ -289,6 +291,7 @@ a.animated-button:link, a.animated-button:visited {
 a.animated-button.victoria-one {
   background-color: white;
   color: #50c878;
+  width: 100%;
   z-index: 1;
 }
 a.animated-button.victoria-one:after {
@@ -414,10 +417,9 @@ a.animated-button.victoria-one:after {
 /* footer */
 .footer{
   background-image: url(../images/footer.png);
-  height: 420px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   position: relative;
   padding: 6em 0 9em 0;
 }
@@ -470,7 +472,21 @@ a.animated-button.victoria-one:after {
     padding: 30px 50px 0px 50px;
   }
 
+  .lorem{
+    margin-top: 4px;
+  }
   .footer{
     padding: 3em 0 9em 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+  a.animated-button:link, a.animated-button:visited{
+    font-size: 2px;
+  }
+  .btn-icon{
+    margin-top: 4px;
+    font-size: 16px;
   }
 }
