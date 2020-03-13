@@ -5,8 +5,7 @@
     <title>EmrIT</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -14,10 +13,35 @@
 </html>
 
 <body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#host">Hosts <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#contactModal" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+
+
     <div class="banner">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-6"> 
                     <div class="banner-content">
                         <h1>Emrit’s Helium Hotspot Host Program</h1>
                         <p>Power up Atlanta</p>
@@ -37,84 +61,24 @@
                                 </div>
                             </a>
                             <!-- Button trigger modal -->
-                            <div class="box-3">
-                                <div type="button" class="btn btn-animation" data-toggle="modal" data-target="#staticBackdrop">
+                            <div class="box-3 contact-btn">
+                                <div class="btn btn-animation" data-toggle="modal" data-target="#contactModal">
                                     <span>Contact Us</span>
                                 </div>
                             </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <!-- <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Contact Us</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    </div> -->
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-md-3 left-bar">
-                                                <div class="contact-info">
-                                                    <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
-                                                    <h2>Contact Us</h2>
-                                                    <h4>We would love to hear from you !</h4>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h5 class="modal-title" id="staticBackdropLabel">Contact Us</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                                <div class="contact-form">
-                                                    <div class="form-group pb-3">
-                                                        <div class="col-sm-12">          
-                                                            <label class="control-label" for="fname">Name:</label>
-                                                            <input type="text" class="w-100 form-control" id="fname" placeholder="Enter First Name" name="fname">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group pb-3">
-                                                        <div class="col-sm-12">          
-                                                            <label class="control-label" for="fname">Email:</label>
-                                                            <input type="email" class="w-100 form-control" id="fname" placeholder="Enter Email" name="fname">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group pb-3">
-                                                        <div class="col-sm-12">          
-                                                            <label class="control-label" for="fname">Subject:</label>
-                                                            <input type="text" class="w-100 form-control" id="fname" placeholder="Enter Subject" name="fname">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group pb-3">
-                                                    <div class="col-sm-12">
-                                                        <label class="control-label" for="comment">Comment:</label>
-                                                        <textarea class="w-100 form-control" rows="5" id="comment"></textarea>
-                                                    </div>
-                                                    </div>
-                                                    <div class="form-group">        
-                                                    <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit" class="btn btn-default">Submit</button>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Understood</button>
-                                    </div> -->
-                                </div>
-                                </div>
-                            </div> 
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 banner-image">
+                <div class="col-6 banner-image">
                     <img class="image" src="assets/images/internet.svg" alt="image" />
                 </div>
             </div>
         </div>
+        <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,256L48,229.3C96,203,192,149,288,149.3C384,149,480,203,576,208C672,213,768,171,864,133.3C960,96,1056,64,1152,69.3C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
     </div>
     <!-- RoadMap Image Section -->
     <div id="about" class="parallax">
@@ -123,7 +87,8 @@
                 <div class="col-lg-6 mt-3">
                     <div class="content">
                         <h2>WHY HOST A HELIUM HOTSPOT AND JOIN THE PEOPLE’S NETWORK?</h2>
-                        <p class="mt-4">The People’s Network enables companies to connect devices and collect
+                        <p class="mt-4">The People’s Network enables companies to connect devices and
+                            collect
                             small data in ways never before possible by delivering secure, ubiquitous,
                             and affordable wireless coverage. Hotspots provide internet connectivity for
                             all sorts of IoT devices: bikes, scooters,temperature sensors, location trackers
@@ -131,67 +96,46 @@
                     </div>
                 </div>
                 <div class="col-lg-6 mt-4">
-                    <div class="roadmap-img">
-                        <img src="assets/images/roadmap.png" alt="">
+                    <div>
+                        <iframe class="roadmap-img" width="560" height="315"
+                            src="https://www.youtube.com/embed/yiWbWFqLDiE" frameborder="0"
+                            allow="autoplay;"></iframe>
+                        <!-- <img src="assets/images/roadmap.png" alt=""> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-      <!-- <div class="lorem_text tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            <h2>WHO CAN HOST AN Emrit HELIUM HOTSPOT?</h2>
-            <p>Anyone can host an Emrit’s Helium Hotspot and earn a new cryptocurrency
-                (HNT) at zero cost and no hassle. Email your name, address, and contact
-                information to adi@emrit.io today to join the Emrit host program. HNT
-                is your reward for being an active, valuable participant in the
-                Helium Network and joining the thousands of people across the
-                United States actively building the Helium Network. your reward
-                for being an active, valuable participant in the Helium Network
-                and joining the thousands of people across the United States actively
-                building the Helium Network.
-            </p>
-        </div>
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-            <h2>WHO CAN HOST AN Emrit HELIUM HOTSPOT?</h2>
-            <p>Anyone can host an Emrit’s Helium Hotspot and earn a new cryptocurrency
-                (HNT) at zero cost and no hassle. Email your name, address, and contact
-                information to adi@emrit.io today to join the Emrit host program. HNT
-                is your reward for being an active, valuable participant in the
-                Helium Network and joining the thousands of people across the
-                United States actively building the Helium Network. your reward
-                for being an active, valuable participant in the Helium Network
-                and joining the thousands of people across the United States actively
-                building the Helium Network.
-            </p>
-        </div>
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">.3..</div>
-      </div> -->
-
     <!-- Buttons Section -->
-    <div id="host" class="hotspot">
+    <div class="hotspot">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="nav" id="nav-tab" role="tablist">
-                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link active" id="tab1" data-toggle="tab" href="#tab1-detail" role="tab" aria-controls="nav-home" aria-selected="true">
-                          <label class="lorem">Lorem Ipsum Dolor</label>
-                          <i class="fas fa-code btn-icon"></i></a></a>
-                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab2" data-toggle="tab" href="#tab2-detail" role="tab" aria-controls="nav-profile" aria-selected="false">
-                          <label class="lorem">Lorem Ipsum Dolor</label>
-                          <i class="fas fa-bolt btn-icon"></i></a>
+                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link active"
+                            id="tab1" data-toggle="tab" href="#tab1-detail" role="tab"
+                            aria-controls="nav-home" aria-selected="true">
+                            <label class="lorem">Lorem Ipsum Dolor</label>
+                            <i class="fas fa-code btn-icon"></i></a></a>
+                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab2"
+                            data-toggle="tab" href="#tab2-detail" role="tab" aria-controls="nav-profile"
+                            aria-selected="false">
+                            <label class="lorem">Lorem Ipsum Dolor</label>
+                            <i class="fas fa-bolt btn-icon"></i></a>
                         </a>
-                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab3" data-toggle="tab" href="#tab3-detail" role="tab" aria-controls="nav-contact" aria-selected="false">
-                          <label class="lorem">Lorem Ipsum Dolor</label>
-                          <i class="fas fa-camera-retro btn-icon"></i></a>
+                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab3"
+                            data-toggle="tab" href="#tab3-detail" role="tab" aria-controls="nav-contact"
+                            aria-selected="false">
+                            <label class="lorem">Lorem Ipsum Dolor</label>
+                            <i class="fas fa-camera-retro btn-icon"></i></a>
                         </a>
                     </div>
                 </div>
 
                 <div class="lorem_text col-lg-6 tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="tab1-detail" role="tabpanel" aria-labelledby="tab1">
+                    <div class="tab-pane fade show active" id="tab1-detail" role="tabpanel"
+                        aria-labelledby="tab1">
                         <h2>WHO CAN HOST AN Emrit HELIUM HOTSPOT?</h2>
                         <p>Anyone can host an Emrit’s Helium Hotspot and earn a new cryptocurrency
                             (HNT) at zero cost and no hassle. Email your name, address, and contact
@@ -241,20 +185,26 @@
                         <p>tab 6
                         </p>
                     </div>
-                  </div>
+                </div>
 
-                  <div class="col-lg-3">
+                <div class="col-lg-3">
                     <div class="nav" id="nav-tab2" role="tablist">
-                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab4" data-toggle="tab" href="#tab4-detail" role="tab" aria-controls="nav-home" aria-selected="true">
-                          <label class="lorem">Lorem Ipsum Dolor</label>
-                          <i class="fas fa-cog btn-icon"></i></a></a>
-                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab5" data-toggle="tab" href="#tab5-detail" role="tab" aria-controls="nav-profile" aria-selected="false">
-                          <label class="lorem">Lorem Ipsum Dolor</label>
-                          <i class="fas fa-tv btn-icon"></i></a>
+                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab4"
+                            data-toggle="tab" href="#tab4-detail" role="tab" aria-controls="nav-home"
+                            aria-selected="true">
+                            <label class="lorem">Lorem Ipsum Dolor</label>
+                            <i class="fas fa-cog btn-icon"></i></a></a>
+                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab5"
+                            data-toggle="tab" href="#tab5-detail" role="tab" aria-controls="nav-profile"
+                            aria-selected="false">
+                            <label class="lorem">Lorem Ipsum Dolor</label>
+                            <i class="fas fa-tv btn-icon"></i></a>
                         </a>
-                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab6" data-toggle="tab" href="#tab6-detail" role="tab" aria-controls="nav-contact" aria-selected="false">
-                          <label class="lorem">Lorem Ipsum Dolor</label>
-                          <i class="fas fa-calendar btn-icon"></i></a>
+                        <a class="btn btn-sm animated-button victoria-one nav-item nav-link" id="tab6"
+                            data-toggle="tab" href="#tab6-detail" role="tab" aria-controls="nav-contact"
+                            aria-selected="false">
+                            <label class="lorem">Lorem Ipsum Dolor</label>
+                            <i class="fas fa-calendar btn-icon"></i></a>
                         </a>
                     </div>
                 </div>
@@ -264,7 +214,7 @@
 
 
     <!--Card Section-->
-    <div class="sign-up">
+    <div id="host" class="sign-up">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 padding-r">
@@ -273,7 +223,8 @@
                             <p>Day One (Priority)</p>
                         </div>
                         <div class="detail">
-                            <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis</p>
+                            <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis
+                            </p>
                             <p class="price">4.5% <span>+</span><span>30c</span></p>
                             <p>Per successfull card charge</p>
                             <ul>
@@ -282,7 +233,9 @@
                                 <li>reporting iconNo setup fees, monthly fees, or hidden.</li>
                             </ul>
                         </div>
-                        <button type="button" class="claim" data-toggle="modal" data-target="#claim"> Claim Free Hotspot  <i class="fas p-2 fa-arrow-right"></i></button>
+                        <button type="button" class="claim" data-toggle="modal" data-target="#claim"> Claim
+                            Free Hotspot
+                            <i class="fas p-2 fa-arrow-right"></i></button>
                     </div>
                 </div>
                 <div class="col-lg-6 right-card padding-l">
@@ -297,94 +250,39 @@
                             <li>Everything you need to manage payments methods.</li>
                         </ul>
                     </div>
-                    <button type="button" class="contact" data-toggle="modal" data-target="#staticBackdrop"> Contact Sales  <i class="fas p-2 fa-arrow-right"></i></button>
+                    <button id="contact" type="button" class="contact" data-toggle="modal" data-target="#contactModal">
+                        Contact Sales <i class="fas p-2 fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="claim" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-3 left-bar">
-                            <div class="contact-info">
-                                <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
-                                <h2>Sign Up</h2>
-                                <h4>Don't have an account? Enter the details and create an account for free!</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-9">
-                            <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <div class="contact-form">
-                                <div class="form-group">
-                                    <div class="col-sm-12">          
-                                        <label class="control-label" for="fname">First Name:</label>
-                                        <input type="text" class="w-100 form-control" id="fname" placeholder="Enter First Name" name="fname">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12">          
-                                        <label class="control-label" for="fname">Last Name:</label>
-                                        <input type="text" class="w-100 form-control" id="fname" placeholder="Enter Last Name" name="fname">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12">          
-                                        <label class="control-label" for="fname">Email:</label>
-                                        <input type="text" class="w-100 form-control" id="fname" placeholder="Enter First Name" name="fname">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12">          
-                                        <label class="control-label" for="fname">Phone Number:</label>
-                                        <input type="number" class="w-100 form-control" id="fname" placeholder="Enter Phone Number" name="fname">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12">          
-                                        <label class="control-label" for="fname">Shipping Address:</label>
-                                        <input type="text" class="w-100 form-control" id="fname" placeholder="Enter Shipping Address" name="fname">
-                                    </div>
-                                </div>
-                                <div class="form-group">        
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <button type="submit" class="btn btn-default">Sign Up</button>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
+    
     <!-- footer -->
     <div class="footer">
+        <svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f2fcf5" fill-opacity="1"
+                d="M0,32L48,58.7C96,85,192,139,288,138.7C384,139,480,85,576,101.3C672,117,768,203,864,218.7C960,235,1056,181,1152,181.3C1248,181,1344,235,1392,261.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="nav footer-links">
-                        <li><a href=""><img src="assets/images/twitter.png"/></a></li>
-                        <li><a href=""><img src="assets/images/facebook.png"/></a></li>
-                        <li><a href=""><img src="assets/images/twitter.png"/></a></li>
-                        <li><a href=""><img src="assets/images/cat.png"/></a></li>
-                        <li><a href=""><img src="assets/images/mail.png"/></a></li>
+                        <li><a href=""><img src="assets/images/twitter.png" /></a></li>
+                        <li><a href=""><img src="assets/images/facebook.png" /></a></li>
+                        <li><a href=""><img src="assets/images/twitter.png" /></a></li>
+                        <li><a href=""><img src="assets/images/cat.png" /></a></li>
+                        <li><a href=""><img src="assets/images/mail.png" /></a></li>
                     </ul>
                     <div class="text-center">
-                        <p class="upper"><a href="">©WHAT CAN I DO TO EARN MORE HELIUM VIA THIS HOST PROGRAM?</a></p>
+                        <p class="upper"><a href="">©WHAT CAN I DO TO EARN MORE HELIUM VIA THIS HOST
+                                PROGRAM?</a></p>
                         <p><a href="">Spread the word, spread the network!</a></p>
-                        <p><a href="">- Refer a friend to earn additional helium. Please email adi@emrit.iofor further details.</a></p>
+                        <p><a href="">- Refer a friend to earn additional helium. Please email
+                                adi@emrit.iofor further
+                                details.</a></p>
                     </div>
                 </div>
             </div>
@@ -393,9 +291,163 @@
 
 
 
+                <!-- Contact Us Modal -->
+                <div class="modal fade" id="contactModal" data-backdrop="static1" tabindex="-1"
+                role="dialog" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Contact Us</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div> -->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-3 left-bar">
+                                    <div class="contact-info">
+                                        <img src="https://image.ibb.co/kUASdV/contact-image.png"
+                                            alt="image" />
+                                        <h2>Contact Us</h2>
+                                        <h4>We would love to hear from you !</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Contact
+                                        Us</h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="contact-form">
+                                        <div class="form-group pb-3">
+                                            <div class="col-sm-12">
+                                                <label class="control-label"
+                                                    for="fname">Name:</label>
+                                                <input type="text"
+                                                    class="w-100 form-control" id="fname"
+                                                    placeholder="Enter First Name"
+                                                    name="fname">
+                                            </div>
+                                        </div>
+                                        <div class="form-group pb-3">
+                                            <div class="col-sm-12">
+                                                <label class="control-label"
+                                                    for="fname">Email:</label>
+                                                <input type="email"
+                                                    class="w-100 form-control" id="fname"
+                                                    placeholder="Enter Email" name="fname">
+                                            </div>
+                                        </div>
+                                        <div class="form-group pb-3">
+                                            <div class="col-sm-12">
+                                                <label class="control-label"
+                                                    for="fname">Subject:</label>
+                                                <input type="text"
+                                                    class="w-100 form-control" id="fname"
+                                                    placeholder="Enter Subject"
+                                                    name="fname">
+                                            </div>
+                                        </div>
+                                        <div class="form-group pb-3">
+                                            <div class="col-sm-12">
+                                                <label class="control-label"
+                                                    for="comment">Comment:</label>
+                                                <textarea class="w-100 form-control"
+                                                    rows="5" id="comment"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit"
+                                                    class="btn btn-default">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+        </div> -->
+                    </div>
+                </div>
+            </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+
+            <!-- Free Claim Hotspot Modal -->
+            <div class="modal fade" id="claim" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-3 left-bar">
+                                <div class="contact-info">
+                                    <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image" />
+                                    <h2>Sign Up</h2>
+                                    <h4>Don't have an account? Enter the details and create an account for free!
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="contact-form">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class="control-label" for="fname">First Name:</label>
+                                            <input type="text" class="w-100 form-control" id="fname"
+                                                placeholder="Enter First Name" name="fname">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class="control-label" for="fname">Last Name:</label>
+                                            <input type="text" class="w-100 form-control" id="fname"
+                                                placeholder="Enter Last Name" name="fname">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class="control-label" for="fname">Email:</label>
+                                            <input type="text" class="w-100 form-control" id="fname"
+                                                placeholder="Enter First Name" name="fname">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class="control-label" for="fname">Phone Number:</label>
+                                            <input type="number" class="w-100 form-control" id="fname"
+                                                placeholder="Enter Phone Number" name="fname">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class="control-label" for="fname">Shipping Address:</label>
+                                            <input type="text" class="w-100 form-control" id="fname"
+                                                placeholder="Enter Shipping Address" name="fname">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="submit" class="btn btn-default">Sign Up</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+                <script src="assets/js/jquery-3.4.1.min.js"></script>
+                <script src="assets/js/bootstrap.min.js"></script>
+                <script src="assets/js/popper.js"></script>
 </body>

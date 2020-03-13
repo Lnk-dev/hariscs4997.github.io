@@ -12,16 +12,93 @@
     src: url(../fonts/Roboto-Bold.ttf);
   }
 
-.banner{
-    background-image: url(../images/banner.png);
-    background-color: #cccccc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    position: relative;
-    padding: 6em 0 9em 0;
-    display: flex;
-    align-items: center;
+
+
+
+
+
+
+
+
+
+
+  .icon-bar {
+    width: 22px; 
+    height: 2px;
+    background-color: #B6B6B6;
+    display: block;
+    transition: all 0.2s;
+    margin-top: 4px
+  }
+   
+  .navbar-toggler {
+    border: none;
+    background: transparent !important;
+  }
+
+  .navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+   
+  .navbar-toggler .middle-bar {
+    opacity: 0;
+  }
+   
+  .navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+   
+  .navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+  }
+   
+  .navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+  }
+   
+  .navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar{
+  display: none;
+}
+  
+  
+.banner
+{
+    /* background-image: url(../images/banner.svg); */
+    background: rgba(90,190,137,1);
+    background: -moz-linear-gradient(top, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(90,190,137,1)), color-stop(50%, rgba(37,181,189,1)), color-stop(100%, rgba(66,138,201,1)));
+    background: -webkit-linear-gradient(top, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+    background: -o-linear-gradient(top, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+    background: -ms-linear-gradient(top, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+    background: linear-gradient(to bottom, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5abe89', endColorstr='#428ac9', GradientType=0 );
+    display: block;
+    padding: 6em 0 0 0;
+}
+.svg{
+  width: 100%;
 }
 .banner h1{
   font-family: Roboto-Bold;
@@ -188,7 +265,7 @@
   text-align: left;
   font-size: 16px;
 }
-.roadmap-img img{
+.roadmap-img{
   box-shadow: 0px 1px 20px 7px rgba(90, 172, 57, 0.205);
   border-radius: 25px;
   width: 100%;
@@ -416,12 +493,22 @@ a.animated-button.victoria-one:after {
 
 /* footer */
 .footer{
-  background-image: url(../images/footer.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  position: relative;
-  padding: 6em 0 9em 0;
+  /* background-image: url(../images/banner.svg); */
+  background: rgba(90,190,137,1);
+  background: -moz-linear-gradient(top, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(90,190,137,1)), color-stop(50%, rgba(37,181,189,1)), color-stop(100%, rgba(66,138,201,1)));
+  background: -webkit-linear-gradient(top, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+  background: -o-linear-gradient(top, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+  background: -ms-linear-gradient(top, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+  background: linear-gradient(to bottom, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5abe89', endColorstr='#428ac9', GradientType=0 );
+
+  /* background-image: url(../images/footer.svg); */
+  display: block;
+  padding: 0 0 6em 0;
+}
+.footer-svg{
+  width: 100%;
 }
 .footer .upper a{
   text-transform: uppercase;
@@ -437,7 +524,7 @@ a.animated-button.victoria-one:after {
 }
 .footer-links{
   justify-content: center;
-  padding: 6em 0em 1em;
+  padding: 0 0 1em;
 }
 .footer-links li{
   padding: 16px;
@@ -450,40 +537,117 @@ a.animated-button.victoria-one:after {
 
 @media screen and (min-width: 300px) and (max-width: 768px){
 
-  .banner{
-    padding: 3em 0 9em 0;
+  button:focus {
+    outline: 1px dotted;
+    outline: 5px auto transparent;
   }
-  .banner-content h1{
-    font-size: 28px;
-  }
-  .banner-content p{
-    font-size: 16px;
-  }
-  .banner-content .buttons{
-    justify-content: center;
-  }
-  .padding-r{
-    padding-right: 15px;
-  }
-  .padding-l{
-    padding-left: 0px;
-  }
-  .detail{
-    padding: 30px 50px 0px 50px;
+  .icon-bar {
+    width: 22px; 
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.2s;
+    margin-top: 4px
   }
 
-  .lorem{
-    margin-top: 4px;
+  .navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
   }
-  .footer{
-    padding: 3em 0 9em 0;
+   
+  .navbar-toggler .middle-bar {
+    opacity: 0;
+  }
+   
+  .navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+   
+  .navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+  }
+   
+  .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+  .navbar{
+    background: #59be8b;
+    display: block;
+  }
+  
+  .nav-link{
+    color: #fff;
+  }
+  .buttons{
+    display: none;
+  }
+  .sign-up .padding-r{
+    padding-right: 15px;
+  }
+  .right-card{
+    margin-right: 15px;
+    margin-left: 15px;
   }
 }
 
+
+@media screen and (min-width: 300px) and (max-width: 500px){
+
+  .banner{
+    padding: 3em 0 0 0;
+  }
+  .banner-content{
+    padding: 0px;
+  }
+  .banner-content h1{
+    font-size: 16px;
+  }
+  .banner-content p{
+    font-size: 14px;
+  }
+  .parallax .mt-5{
+    margin-top: 0px !important;
+  }
+  .parallax .content{
+    padding: 0px;
+  }
+  .sign-up{
+    padding-bottom: 100px;
+  }
+  .detail{
+    padding: 30px 25px 0px 25px;
+  }
+  .modal-dialog {
+    max-width: 100%;
+  }
+  .contact-form button{
+    width: 100%;
+  }
+}
+
+
+
 @media screen and (min-width: 769px) and (max-width: 1024px){
 
-  a.animated-button:link, a.animated-button:visited{
-    font-size: 2px;
+  .buttons a{
+    width: 50%;
+  }
+  .button .box-3{
+    width: 50%;
+  }
+  .buttons .btn-animation{
+    width: 100%;
+  }
+  .buttons .contact-btn{
+    width: 100%;
+  }
+  .lorem{
+    font-size: 12px;
   }
   .btn-icon{
     margin-top: 4px;
