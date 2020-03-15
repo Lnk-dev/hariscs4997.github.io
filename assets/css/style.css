@@ -17,11 +17,6 @@
 
 
 
-
-
-
-
-
   .icon-bar {
     width: 22px; 
     height: 2px;
@@ -74,13 +69,35 @@
 
 
 
-
-
-
-
-.navbar{
-  display: none;
+.navigation{
+  background: #53b783;
+  padding: 0px 0px 0px 16px;
 }
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .contact-us:hover {
+  color: rgb(255, 255, 255);
+  background-color: #328ed7;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+color: rgba(255, 255, 255, 0.9);
+transition: 0.5s;
+}
+.contact-us{
+  background-color: #408cc8;
+}
+.padding-20{
+  padding: 20px;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+
+
   
   
 .banner
@@ -95,14 +112,17 @@
     background: linear-gradient(to bottom, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5abe89', endColorstr='#428ac9', GradientType=0 );
     display: block;
-    padding: 6em 0 0 0;
+    padding: 7em 0 0 0;
+}
+.buttons{
+  display: none;
 }
 .svg{
   width: 100%;
 }
 .banner h1{
   font-family: Roboto-Bold;
-  font-size: 48px;
+  font-size: 56px;
   color: #fff;
 }
 .banner p{
@@ -117,7 +137,7 @@
   text-align: center;
 }
 .image{
-  width: 60%;
+  width: 50%;
 }
 
 .modal-dialog{
@@ -240,7 +260,7 @@
   
 }
 .banner-content{
-  padding: 30px 0px;
+  padding: 60px 0px;
 }
 .banner-content p{
   font-family: Roboto-Regular;
@@ -250,7 +270,7 @@
 .content{
   width: 100%;
   margin: auto;
-  padding: 50px 0px;
+  padding: 10px 0px;
 }
 
 .content h2{
@@ -262,9 +282,14 @@
 }
 .content p{
   font-family: Roboto-Regular;
-  color: #b1b1b1;
+  color: #454545;
   text-align: left;
   font-size: 16px;
+}
+.content ol li{
+  font-family: Roboto-Regular;
+  color: #808080;
+  line-height: 2;
 }
 .roadmap-img{
   box-shadow: 0px 1px 20px 7px rgba(90, 172, 57, 0.205);
@@ -584,9 +609,7 @@ a.animated-button.victoria-one:after {
   .nav-link{
     color: #fff;
   }
-  .buttons{
-    display: none;
-  }
+  
   .sign-up .padding-r{
     padding-right: 15px;
   }
@@ -599,18 +622,27 @@ a.animated-button.victoria-one:after {
 
 @media screen and (min-width: 300px) and (max-width: 500px){
 
+  .navbar-brand{
+    width: 78%;
+  }
   .banner{
     padding: 3em 0 0 0;
   }
   .banner-content{
-    padding: 0px;
+    padding: 20px 0px 0px;
   }
   .banner-content h1{
-    font-size: 16px;
+    font-size: 20px;
   }
   .banner-content p{
-    font-size: 14px;
+    font-size: 13px;
   }
+
+  .banner .banner-image .image{
+    width: 100%;
+  }
+
+
   .parallax .mt-5{
     margin-top: 0px !important;
   }
