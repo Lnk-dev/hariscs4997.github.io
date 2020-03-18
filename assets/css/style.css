@@ -19,7 +19,8 @@ html, body{
 }
 
 .top-bar{
-  background-color: #428bc9;
+  background: linear-gradient(to right, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+  /* background-color: #428bc9; */
   justify-content: center;
   align-items: center;
   display: flex;
@@ -159,6 +160,7 @@ transition: 0.5s;
   position: absolute;
   bottom: 20px;
   width: 30%;
+  z-index: 10;
 }
 .banner-text button{
   border: 1px solid #fff;
@@ -168,7 +170,10 @@ transition: 0.5s;
 .image{
   width: 100%;
 }
-
+.scroll-down .btn:hover{
+  cursor: pointer;
+  color: #fff;
+}
 .modal-dialog{
   max-width: 75%;
 }
@@ -605,7 +610,7 @@ a.animated-button.victoria-one:after {
 
 #clouds{
 	position: absolute;
-  bottom: 130px;
+  bottom: 0;
 }
 
 /*Time to finalise the cloud shape*/
@@ -758,6 +763,7 @@ form{
     position: relative;
     width: 100%;
     bottom: 0;
+    z-index: 10;
   }
   .banner h1{
     font-size: 36px;
