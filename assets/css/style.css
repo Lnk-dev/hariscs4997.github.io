@@ -171,8 +171,9 @@ transition: 0.5s;
   width: 100%;
 }
 .scroll-down .btn:hover{
+  background: #fff;
   cursor: pointer;
-  color: #fff;
+  color: linear-gradient(to right, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
 }
 .modal-dialog{
   max-width: 75%;
