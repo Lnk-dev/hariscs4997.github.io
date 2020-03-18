@@ -462,6 +462,7 @@ a.animated-button.victoria-one {
   color: #339fc4;
   width: 100%;
   z-index: 1;
+  border-radius: 25px;
 }
 a.animated-button.victoria-one:after {
 	background: #339fc4;
