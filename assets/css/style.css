@@ -20,17 +20,23 @@ html, body{
 }
 
 .top-bar{
-  background: linear-gradient(to right, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+  background: linear-gradient(134deg,#27284B 0%,#27284B 100%);
   /* background-color: #428bc9; */
   justify-content: center;
   align-items: center;
   display: flex;
   padding: 4px;
-  
+  transition: 1s;
+}
+.top-bar:hover{
+  background: linear-gradient(to right, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
+  text-decoration: none;
+
 }
 .top-bar p{
   color: #fff;
   margin-bottom: 0px;
+  text-decoration: none;
 }
 
   .icon-bar {
@@ -183,7 +189,6 @@ transition: 0.5s;
   max-width: 75%;
 }
 .modal-title{
-  font-family: Roboto-Bold;
   margin-bottom: 12px;
   font-size: 24px;
 }
@@ -309,7 +314,6 @@ transition: 0.5s;
   padding: 30px 0px;
 }
 .banner-content p{
-  font-family: Roboto-Regular;
   font-size: 24px;
   color: #fff;
 }
@@ -333,7 +337,6 @@ transition: 0.5s;
   font-size: 16px;
 }
 .content ol li{
-  font-family: Roboto-Regular;
   color: #808080;
   line-height: 2;
 }
@@ -343,6 +346,11 @@ transition: 0.5s;
   transition: all 0.2s ease 0s;
   border-radius: 25px;
   width: 100%;
+}
+.box-shadow{
+  box-shadow: 0px 1px 20px 7px rgba(90, 172, 57, 0.205);
+  border-radius: 25px;
+  padding: 20px;
 }
 .shadow{
   box-shadow: 0px 1px 20px 7px rgba(90, 172, 57, 0.205);
@@ -357,6 +365,10 @@ transition: 0.5s;
   padding: 60px 0px;
 }
 
+.list li{
+  color: #b1b1b1;
+  line-height: 1.8;
+}
 
 /* Buttons Effects */
 /* Global Button Styles */
@@ -428,7 +440,6 @@ a.animated-button:link, a.animated-button:visited {
   float: left;
 }
 .lorem{
-  font-family: Roboto-Regular;
   margin-bottom: 0px;
   font-weight: normal;
   font-size: 14px;
@@ -437,12 +448,11 @@ a.animated-button:link, a.animated-button:visited {
   margin-top: 30px;
 }
 .lorem_text h2{
-  font-family: Roboto-Bold;
   font-size: 24px;
   color: #339fc4;
+  font-weight: 600;
 }
 .lorem_text p{
-  font-family: Roboto-Regular;
   color: #b1b1b1;
   text-align: left;
   font-size: 16px;
@@ -479,7 +489,6 @@ a.animated-button.victoria-one:after {
   border-top-left-radius: 5px;
 }
 .heading{
-  font-family: Roboto-Bold;
   text-align: center;
   font-size: 20px;
   color: #339fc4;
@@ -493,13 +502,11 @@ a.animated-button.victoria-one:after {
   padding: 50px 50px 24px 50px;
 }
 .detail p{
-  font-family: Roboto-Regular;
   text-align: center;
   font-size: 16px;
   color: #758b7c;
 }
 .detail .price{
-  font-family: Roboto-Regular;
   margin-bottom: 0px;
   font-size: 50px;
   color: #339fc4;
@@ -518,7 +525,6 @@ a.animated-button.victoria-one:after {
 }
 
 .claim{
-  font-family: Roboto-Bold;
   background-color: #f2fcf5;
   color: #339fc4;
   padding: 25px;
@@ -551,7 +557,6 @@ a.animated-button.victoria-one:after {
 }
 .contact{
   background-color: #339fc4;
-  font-family: Roboto-Bold;
   color: #fff;
   padding: 25px;
   border: none;
@@ -594,14 +599,12 @@ a.animated-button.victoria-one:after {
 }
 .footer .upper a{
   text-transform: uppercase;
-  font-family: Roboto-Regular;
   color: #d3e4e7;
 }
 .footer p{
   margin-bottom: 4px;
 }
 .footer p a{
-  font-family: Roboto-Regular;
   color: #d3e4e7;
 }
 .footer-links{
