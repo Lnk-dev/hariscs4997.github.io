@@ -82,15 +82,18 @@ html, body{
   .navbar-toggler .top-bar {
     transform: rotate(45deg);
     transform-origin: 10% 10%;
+    background: linear-gradient(to right, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
   }
    
   .navbar-toggler .middle-bar {
     opacity: 0;
+    background: linear-gradient(to right, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
   }
    
   .navbar-toggler .bottom-bar {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
+    background: linear-gradient(to right, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
   }
    
   .navbar-toggler.collapsed .top-bar {
