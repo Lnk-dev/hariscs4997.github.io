@@ -788,8 +788,11 @@ a.animated-button.victoria-one:after {
 form{
   border: 1px solid #dfdfdf;
   border-radius: 15px;
+  margin-top: 20px;
 }
-
+.form-group {
+  margin-bottom: 0rem;
+}
 .form-control {
   border-bottom: 1px solid #dfdfdf;
   border-top: none;
@@ -798,7 +801,12 @@ form{
   padding: 25px 15px;
   background: transparent;
 }
-
+.detail-1{
+  margin-top: 20px;
+}
+.border-bottom-0{
+  border-bottom: 1px solid transparent;
+}
 @media screen and (min-width: 300px) and (max-width: 500px){
 
   #clouds {
