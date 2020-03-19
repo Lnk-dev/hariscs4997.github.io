@@ -820,7 +820,8 @@ a.animated-button.victoria-one:after {
   padding-left: 0px;
   padding-right: 0px;
 }
-form{
+
+.form{
   border: 1px solid #dfdfdf;
   border-radius: 8px;
   margin-top: 20px;
