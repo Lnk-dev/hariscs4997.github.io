@@ -143,6 +143,7 @@ transition: 0.5s;
   background: #38a2ff;
   padding: 10px 20px;
   border-radius: 6px;
+  width:100%;
 }
 .padding-10{
   padding: 10px;
