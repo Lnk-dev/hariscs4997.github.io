@@ -9,12 +9,25 @@
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" href="assets/images/top-logo.svg"/>
+<style>
+.temp{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 27px;
+    background-color: transparent;
+    border: none;
+}
+</style>
 </head>
 
 <body>
 <div class="container-fluid">
     <div class="row" style="height: 100vh;">
         <div class="col-md-3 left-bar">
+            <button class='temp' onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
             <div class="contact-info">
                 <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image" />
                 <h2>Contact Us</h2>
@@ -72,6 +85,9 @@
 <script src="assets/js/popper.js"></script>
 
 <script>
+    function goBack() {
+  window.history.back();
+}
 function submit_form(){
 var settings = {
   "url": "https://hifari2020.herokuapp.com/contact",

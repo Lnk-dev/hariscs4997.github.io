@@ -259,13 +259,13 @@ transition: 0.5s;
 .contact-form label{
   font-weight:600;
 }
-.contact-form button{
+.btn{
   background: #408cc8;
   color: #fff;
   font-weight: 600;
   width: 25%;
 }
-.contact-form button:focus{
+.btn{
   box-shadow:none;
 }
 .close{
