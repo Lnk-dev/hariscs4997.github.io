@@ -469,6 +469,9 @@ a.animated-button.victoria-one {
   left: 8%;
   font-size: 15px;
 }
+.height{
+  height: 341px;
+}
 a.animated-button.victoria-one:after {
 	background: linear-gradient(to bottom, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
 	-moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
