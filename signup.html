@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
+<style>
+ input[type=number].no-spinner::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+     margin: 0; 
+}
+</style>
 </head>
 
 <body>
@@ -37,19 +44,19 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control" id="lname"
                                             placeholder="Last Name" name="fname" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="email" class="w-100 form-control" id="email"
                                             placeholder="Email" name="fname" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="number" class="w-100 form-control" id="fname"
+                                        <input type="number" class="w-100 form-control no-spinner" id="number"
                                             placeholder="Phone Number" name="fname">
                                     </div>
                                 </div>
@@ -57,8 +64,8 @@
                                     <div class="col-sm-12 prl-0">
                                         <div class="form-group">
                                             <div class="col-sm-12 prl-0">
-                                                <input type="number" class="w-100 form-control border-bottom-0" name="quantity" value="1" id="fname"
-                                                    placeholder="Country" name="fname" style="padding-right:10px;text-align:right;border-radius:0 0 6px 6px">
+                                                <input type="number" class="w-100 form-control border-bottom-0" name="quantity" value="1" id="counter"
+                                                    placeholder="Number of installations" name="fname" style="padding-right:10px;text-align:right;border-radius:0 0 6px 6px" onchange="counter_form(this)">
                                                     <p class="counter">Number of installations</p>
                                             </div>
                                         </div>
@@ -77,37 +84,37 @@
                             <div class="form">
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control border-bottom-0" id="fname"
+                                        <input type="text" class="w-100 form-control" id="shipping"
                                             placeholder="Shipping Address" name="fname" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control address" id="address1"
                                             placeholder="Address Line 1" name="fname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control" id="address2"
                                             placeholder="Address Line 2" name="fname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control" id="city"
                                             placeholder="City" name="fname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control" id="state"
                                             placeholder="State" name="fname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control border-bottom-0" id="fname"
+                                        <input type="text" class="w-100 form-control border-bottom-0" id="country"
                                             placeholder="Country" name="fname">
                                     </div>
                                 </div>
@@ -123,57 +130,53 @@
                                 <h4>Final Installation Address</h4>
                             </div>
                             <div class="form">
+                                <div class="address">
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
-                                            placeholder="Address Line 1" name="fname">
+                                        <input type="text" class="w-100 form-control" id="address1"
+                                            placeholder="Address Line 1" name="fname" required>
                                     </div>
                                 </div>
+                            </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
-                                            placeholder="Address Line 2" name="fname">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control" id="city2"
                                             placeholder="City" name="fname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control" id="state2"
                                             placeholder="State" name="fname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control" id="country2"
                                             placeholder="Country" name="fname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control" id="longitude"
                                             placeholder="Longitude" name="fname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control" id="fname"
+                                        <input type="text" class="w-100 form-control" id="latitude"
                                             placeholder="Latitude" name="fname">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="number" class="w-100 form-control border-bottom-0" id="fname"
+                                        <input type="number" class="w-100 form-control border-bottom-0" id="height"
                                             placeholder="Height/Floor#" name="fname">
                                     </div>
                                 </div>
                             </div>    
                             <div class="form-group">
-                                <a class="nav-link padding-10 contact-us mt-4 mb-4 text-center"  href="#">Submit</a>
+                                <button class="nav-link padding-10 contact-us mt-4 mb-4 text-center"  type="submit">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -181,8 +184,28 @@
             </form>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
 
-
+function counter_form(a){
+    if(a.value <= 0){
+        return false;
+    }
+    var temp = a.value
+$(".address").html(""); 
+ for(var i=1 ; i<=temp;i++){
+     console.log('a')
+$(".address").append(`
+<div class="form-group">
+            <div class="col-sm-12 prl-0">
+             <input type="text" class="w-100 form-control" id="address`+i+`"
+                             placeholder="Address Line `+i+`" name="fname" required>
+                                    </div>
+                                </div>
+`)
+ }
+}
+</script>
 </body>
 
 </html>
