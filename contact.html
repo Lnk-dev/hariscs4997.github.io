@@ -25,25 +25,25 @@
             <h5 class="modal-title" id="staticBackdropLabel">Contact
                 Us</h5>
             
-            <form class="contact-form" style="border: none;" action="contact_submit.html">
+            <form action="javascript:void(0)"  class="contact-form" style="border: none;" onsubmit="submit_form()">
                 <div class="form-group pb-3">
                     <div class="col-sm-12">
                         <label class="control-label" for="fname">Name:</label>
-                        <input type="text" class="w-100 form-control" id="fname"
+                        <input type="text" class="w-100 form-control" id="name"
                             placeholder="Enter Name" name="fname" required>
                     </div>
                 </div>
                 <div class="form-group pb-3">
                     <div class="col-sm-12">
                         <label class="control-label" for="fname">Email:</label>
-                        <input type="email" class="w-100 form-control" id="fname"
+                        <input type="email" class="w-100 form-control" id="email"
                             placeholder="Enter Email" name="fname" required>
                     </div>
                 </div>
                 <div class="form-group pb-3">
                     <div class="col-sm-12">
                         <label class="control-label" for="fname">Subject:</label>
-                        <input type="text" class="w-100 form-control" id="fname"
+                        <input type="text" class="w-100 form-control" id="subject"
                             placeholder="Enter Subject" name="fname" required>
                     </div>
                 </div>
@@ -67,5 +67,25 @@
      window.location.href = "contact_submit.html"
  }
 </script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+function submit_form(){
+var settings = {
+  "url": "https://hifari2020.herokuapp.com/contact",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({"contact":[document.getElementById("name").value,document.getElementById("email").value,document.getElementById("subject").value,document.getElementById("comment").value]}),
+};
+
+$.ajax(settings).done(function (response) {
+//   console.log(response);
+window.location.href="contact_submit.html"
+});
+}
+</script>
 </body>
 </html>
