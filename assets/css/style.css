@@ -503,6 +503,7 @@ a.animated-button.victoria-one:after {
   color: #339fc4;
   border-bottom: 1px solid #e4efe7;
   padding: 20px;
+  font-weight: 600;
 }
 .heading p{
   margin-bottom: 0px;
@@ -548,8 +549,8 @@ a.animated-button.victoria-one:after {
   background: linear-gradient(to bottom, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
   border-top-right-radius: 5px;
   padding-right: 0px;
-  height: 440px;
-  margin-top: 35px;
+  height: 458px;
+  margin-top: 135px;
   color: #fff;
 }
 .right-card .heading p{
