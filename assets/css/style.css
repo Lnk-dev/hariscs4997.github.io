@@ -11,7 +11,27 @@
     font-family: SF-Regular;
     src: url(../fonts/SFProDisplay-Regular.ttf);
   }
-
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    background-image: none;
+  }
+  
+  .carousel-control-next-icon:after
+  {
+    content: '>';
+    font-size: 55px;
+    color: #339fc4;
+  }
+  
+  .carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 55px;
+    color: #339fc4;
+  }
 
 html, body{
   font-family: SF-Regular;
@@ -19,7 +39,7 @@ html, body{
   overflow-x: hidden;
 }
 
-.top-bar{
+.header-top-bar{
   background: linear-gradient(134deg,#27284B 0%,#27284B 100%);
   /* background-color: #428bc9; */
   justify-content: center;
@@ -28,12 +48,12 @@ html, body{
   padding: 4px;
   transition: 1s;
 }
-.top-bar:hover{
+.header-top-bar:hover{
   background: linear-gradient(to right, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
   text-decoration: none;
 
 }
-.top-bar p{
+.header-top-bar p{
   color: #fff;
   margin-bottom: 0px;
   text-decoration: none;
@@ -98,6 +118,7 @@ html, body{
 .navigation{
   background: rgba(0, 90, 89, 0.9);
   padding: 4px 20px 4px 20px;
+  z-index: 1;
 }
 .navbar-nav{
   margin-right: 15px;
@@ -463,9 +484,18 @@ a.animated-button.victoria-one {
   width: 100%;
   z-index: 1;
   border-radius:25px;
+  border-radius: 25px;
+}
+.emoji{
+  position: absolute;
+  left: 8%;
+  font-size: 15px;
+}
+.height{
+  height: 350px;
 }
 a.animated-button.victoria-one:after {
-	background: #339fc4;
+	background: linear-gradient(to bottom, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
 	-moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
 	-ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
 	-webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
@@ -495,6 +525,7 @@ a.animated-button.victoria-one:after {
   color: #339fc4;
   border-bottom: 1px solid #e4efe7;
   padding: 20px;
+  font-weight: 600;
 }
 .heading p{
   margin-bottom: 0px;
@@ -540,8 +571,8 @@ a.animated-button.victoria-one:after {
   background: linear-gradient(to bottom, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
   border-top-right-radius: 5px;
   padding-right: 0px;
-  height: 440px;
-  margin-top: 35px;
+  height: 458px;
+  margin-top: 135px;
   color: #fff;
 }
 .right-card .heading p{
@@ -867,6 +898,109 @@ form{
 
 }
 
+.animation-ctn{
+  text-align:center;
+  margin-top:5em;
+}
+
+	@-webkit-keyframes checkmark {
+    0% {
+        stroke-dashoffset: 100px
+    }
+
+    100% {
+        stroke-dashoffset: 200px
+    }
+}
+
+@-ms-keyframes checkmark {
+    0% {
+        stroke-dashoffset: 100px
+    }
+
+    100% {
+        stroke-dashoffset: 200px
+    }
+}
+
+@keyframes checkmark {
+    0% {
+        stroke-dashoffset: 100px
+    }
+
+    100% {
+        stroke-dashoffset: 0px
+    }
+}
+
+@-webkit-keyframes checkmark-circle {
+    0% {
+        stroke-dashoffset: 480px
+   
+    }
+
+    100% {
+        stroke-dashoffset: 960px;
+      
+    }
+}
+
+@-ms-keyframes checkmark-circle {
+    0% {
+        stroke-dashoffset: 240px
+    }
+
+    100% {
+        stroke-dashoffset: 480px
+    }
+}
+
+@keyframes checkmark-circle {
+    0% {
+        stroke-dashoffset: 480px 
+    }
+
+    100% {
+        stroke-dashoffset: 960px
+    }
+}
+
+@keyframes colored-circle { 
+    0% {
+        opacity:0
+    }
+
+    100% {
+        opacity:100
+    }
+}
+
+/* other styles */
+/* .svg svg {
+    display: none
+}
+ */
+.inlinesvg .svg svg {
+    display: inline
+}
+
+/* .svg img {
+    display: none
+} */
+
+.icon--order-success svg polyline {
+    -webkit-animation: checkmark 0.25s ease-in-out 0.7s backwards;
+    animation: checkmark 0.25s ease-in-out 0.7s backwards
+}
+
+.icon--order-success svg circle {
+    -webkit-animation: checkmark-circle 0.6s ease-in-out backwards;
+    animation: checkmark-circle 0.6s ease-in-out backwards;
+}
+.icon--order-success svg circle#colored {
+    -webkit-animation: colored-circle 0.6s ease-in-out 0.7s backwards;
+    animation: colored-circle 0.6s ease-in-out 0.7s backwards;
+} 
 @media screen and (min-width: 769px) and (max-width: 1024px){
 
   .banner-content{

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>EmrIT</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/images/top-logo.svg"/>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row" style="height: 100vh;">
+        <div class="col-md-3 left-bar">
+            <div class="contact-info">
+                <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image" />
+                <h2>Contact Us</h2>
+                <h4>We would love to hear from you !</h4>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <h5 class="modal-title" id="staticBackdropLabel">Contact
+                Us</h5>
+            
+            <form action="javascript:void(0)"  class="contact-form" style="border: none;" onsubmit="submit_form()">
+                <div class="form-group pb-3">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="fname">Name:</label>
+                        <input type="text" class="w-100 form-control" id="name"
+                            placeholder="Enter Name" name="fname" required>
+                    </div>
+                </div>
+                <div class="form-group pb-3">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="fname">Email:</label>
+                        <input type="email" class="w-100 form-control" id="email"
+                            placeholder="Enter Email" name="fname" required>
+                    </div>
+                </div>
+                <div class="form-group pb-3">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="fname">Subject:</label>
+                        <input type="text" class="w-100 form-control" id="subject"
+                            placeholder="Enter Subject" name="fname" required>
+                    </div>
+                </div>
+                <div class="form-group pb-3">
+                    <div class="col-sm-12">
+                        <label class="control-label" for="comment">Comment:</label>
+                        <textarea class="w-100 form-control" rows="5" id="comment" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- <script>
+ function submit(){
+     window.location.href = "contact_submit.html"
+ }
+</script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+function submit_form(){
+var settings = {
+  "url": "https://hifari2020.herokuapp.com/contact",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({"contact":[document.getElementById("name").value,document.getElementById("email").value,document.getElementById("subject").value,document.getElementById("comment").value]}),
+};
+
+$.ajax(settings).done(function (response) {
+//   console.log(response);
+window.location.href="contact_submit.html"
+});
+}
+</script>
+</body>
+</html>
