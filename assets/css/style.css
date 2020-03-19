@@ -47,6 +47,7 @@ html, body{
   display: flex;
   padding: 4px;
   transition: 1s;
+  z-index: 3;
 }
 .header-top-bar:hover{
   background: linear-gradient(to right, rgba(90,190,137,1) 0%, rgba(37,181,189,1) 50%, rgba(66,138,201,1) 100%);
@@ -57,6 +58,7 @@ html, body{
   color: #fff;
   margin-bottom: 0px;
   text-decoration: none;
+  font-size: 12px;
 }
 
   .icon-bar {
@@ -799,6 +801,10 @@ form{
 
 @media screen and (min-width: 300px) and (max-width: 500px){
 
+  #clouds {
+    position: absolute;
+    bottom: -40px;
+}
   .banner-content{
     padding: 0px;
   }
