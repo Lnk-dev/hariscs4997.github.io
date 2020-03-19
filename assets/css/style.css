@@ -170,6 +170,9 @@ transition: 0.5s;
   border-radius: 6px;
   width:100%;
 }
+.contact-us:hover{
+  color: #fff;
+}
 .padding-10{
   padding: 10px;
 }
@@ -631,7 +634,17 @@ a.animated-button.victoria-one:after {
   padding-left: 0px;
 }
 
-
+.counter{
+  position:relative;
+  top:-38px;
+  font-size:15px;
+  left:15px;
+  font-family:system-ui;
+  color:#222426;
+  width:auto;
+  margin-bottom:-22px;
+  width: 30%;
+}
 
 
 
