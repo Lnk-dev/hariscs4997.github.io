@@ -108,10 +108,32 @@ html, body{
 
 
 
+  .list-head{
+    display: flex;
+  }
 
+  .number {
+    height: 28px;
+    width: 28px;
+    background: #38A2FF;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+.green{
+  background: #29D391;
+}
 
-
-
+.form-control:focus {
+  color: #495057;
+  background-color: transparent;
+  border-color: #23c1b5;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+}
 
 
 
