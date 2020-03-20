@@ -157,20 +157,20 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control longitude_val" id="longitude"
-                                            placeholder="Longitude" name="longitude">
+                                        <input type="number" class="w-100 form-control longitude_val" id="longitude"
+                                            placeholder="Longitude" name="longitude" step="any">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control latitude_val" id="latitude"
-                                            placeholder="Latitude" name="latitude">
+                                        <input type="number" class="w-100 form-control latitude_val" id="latitude"
+                                            placeholder="Latitude" name="latitude" step="any">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
                                         <input type="number" class="w-100 form-control border-bottom-0 height_val" id="height"
-                                            placeholder="Height/Floor#" name="height">
+                                            placeholder="Height/Floor#" name="height" step="any">
                                     </div>
                                 </div>
                             </div>    
@@ -200,43 +200,43 @@ $(".address").append(`
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
                                         <input type="text" class="w-100 form-control address_val" id="address_`+i+`"
-                                            placeholder="Address Line `+i+`" name="address_`+i+`" required>
+                                            placeholder="Address Line `+i+`" name="address_`+i+`" >
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control city_val" id="city`+i+`"
-                                            placeholder="City" name="city`+i+`">
+                                        <input type="text" class="w-100 form-control city_val" id="city_`+i+`"
+                                            placeholder="City" name="city_`+i+`">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control state_val" id="state`+i+`"
-                                            placeholder="State" name="state`+i+`">
+                                        <input type="text" class="w-100 form-control state_val" id="state_`+i+`"
+                                            placeholder="State" name="state_`+i+`">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control country_val" id="country`+i+`"
-                                            placeholder="Country" name="country`+i+`">
+                                        <input type="text" class="w-100 form-control country_val" id="country_`+i+`"
+                                            placeholder="Country" name="country_`+i+`" >
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control longitude_val" id="longitude`+i+`"
-                                            placeholder="Longitude" name="longitude`+i+`">
+                                        <input type="number" class="w-100 no-spinner form-control longitude_val" id="longitude_`+i+`"
+                                            placeholder="Longitude" name="longitude_`+i+`" step="any">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control latitude_val" id="latitude`+i+`"
-                                            placeholder="Latitude" name="latitude`+i+`">
+                                        <input type="number" class="w-100 no-spinner form-control latitude_val" id="latitude_`+i+`"
+                                            placeholder="Latitude" name="latitude_`+i+`" step="any">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="number" class="w-100 form-control border-bottom-0 height_val" id="height`+i+`"
-                                            placeholder="Height/Floor#" name="height`+i+`">
+                                        <input type="number" class="w-100 no-spinner form-control border-bottom-0 height_val" id="height`+i+`"
+                                            placeholder="Height/Floor#" name="height`+i+`" step="any">
                                     </div>
                                 </div>
                             </div>    `)
@@ -244,45 +244,51 @@ $(".address").append(`
 }
 function submit_form(){
     var address = document.querySelectorAll(".address_val")[0].value;
-    for(var i =1 ;i<=document.querySelectorAll(".address_val").length;i++){
-        if(document.querySelectorAll(".address_val")[i] && document.querySelectorAll(".address_val")[i].value !=""){       
+    for(var i =1 ;i<document.querySelectorAll(".address_val").length;i++){
+        if(document.querySelectorAll(".address_val")[i] && document.querySelectorAll(".address_val")[i].value !=""){    
+            document.querySelectorAll(".address_val")[i].required = false;
         address+=","+document.querySelectorAll(".address_val")[i].value
+    }
+    else{
+        document.querySelectorAll(".address_val")[i].required = true;
+         document.querySelector("form").submit();
+           return;
     }
     }
     var state = document.querySelectorAll(".state_val")[0].value;
-    for(var i =1 ;i<=document.querySelectorAll(".state_val").length;i++){
+    for(var i =1 ;i<document.querySelectorAll(".state_val").length;i++){
         if(document.querySelectorAll(".state_val")[i]&& document.querySelectorAll(".state_val")[i].value !=""){
         state+=","+document.querySelectorAll(".state_val")[i].value
         }
     }
     var city = document.querySelectorAll(".city_val")[0].value;
-    for(var i =1 ;i<=document.querySelectorAll(".city_val").length;i++){
+    for(var i =1 ;i<document.querySelectorAll(".city_val").length;i++){
         if(document.querySelectorAll(".city_val")[i]&& document.querySelectorAll(".city_val")[i].value !=""){
         city+=","+document.querySelectorAll(".city_val")[i].value
         }
     }
     var country = document.querySelectorAll(".country_val")[0].value;
-    for(var i =1 ;i<=document.querySelectorAll(".country_val").length;i++){
+    for(var i =1 ;i<document.querySelectorAll(".country_val").length;i++){
         if(document.querySelectorAll(".country_val")[i]&& document.querySelectorAll(".country_val")[i].value !=""){
             country+=","+document.querySelectorAll(".country_val")[i].value
         }
     }
 
     var longitude = document.querySelectorAll(".longitude_val")[0].value;
-    for(var i =1 ;i<=document.querySelectorAll(".longitude_val").length;i++){
+    for(var i =1 ;i<document.querySelectorAll(".longitude_val").length;i++){
         if(document.querySelectorAll(".longitude_val")[i]&& document.querySelectorAll(".longitude_val")[i].value !=""){
             longitude+=","+document.querySelectorAll(".longitude_val")[i].value
         }
     }
     var latitude = document.querySelectorAll(".latitude_val")[0].value;
-    for(var i =1 ;i<=document.querySelectorAll(".latitude_val").length;i++){
+    for(var i =1 ;i<document.querySelectorAll(".latitude_val").length;i++){
         if(document.querySelectorAll(".latitude_val")[i]&& document.querySelectorAll(".latitude_val")[i].value !=""){
             latitude+=","+document.querySelectorAll(".latitude_val")[i].value
         }
     }
 
     var height = document.querySelectorAll(".height_val")[0].value;
-    for(var i =1 ;i<=document.querySelectorAll(".height_val").length;i++){
+    for(var i =1 ;i<document.querySelectorAll(".height_val").length;i++){
         if(document.querySelectorAll(".height_val")[i]&& document.querySelectorAll(".height_val")[i].value !=""){
             latitude+=","+document.querySelectorAll(".height_val")[i].value
         }
