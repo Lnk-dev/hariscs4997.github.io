@@ -263,6 +263,9 @@ $("#mySignUpForm").on("submit",function(){
     if(document.querySelectorAll(".state_val")[0].value!=""){
  state = document.querySelectorAll(".state_val")[0].value;
     }
+    // else{
+    //     state = "-"
+    // }
     for(var i =1 ;i<document.querySelectorAll(".state_val").length;i++){
         if(document.querySelectorAll(".state_val")[i]&& document.querySelectorAll(".state_val")[i].value !=""){
 
@@ -273,6 +276,9 @@ $("#mySignUpForm").on("submit",function(){
 
  city = document.querySelectorAll(".city_val")[0].value;
     }
+    // else{
+    //     city = "-"
+    // }
     for(var i =1 ;i<document.querySelectorAll(".city_val").length;i++){
         if(document.querySelectorAll(".city_val")[i]&& document.querySelectorAll(".city_val")[i].value !=""){
         city+=","+document.querySelectorAll(".city_val")[i].value
@@ -281,6 +287,9 @@ $("#mySignUpForm").on("submit",function(){
     if(document.querySelectorAll(".country_val")[0].value!=""){
      country = document.querySelectorAll(".country_val")[0].value;
     }
+    // else{
+    //     country = "-"
+    // }
     for(var i =1 ;i<document.querySelectorAll(".country_val").length;i++){
         if(document.querySelectorAll(".country_val")[i]&& document.querySelectorAll(".country_val")[i].value !=""){
             country+=","+document.querySelectorAll(".country_val")[i].value
@@ -289,6 +298,9 @@ $("#mySignUpForm").on("submit",function(){
     if(document.querySelectorAll(".longitude_val")[0].value!=""){
     longitude = document.querySelectorAll(".longitude_val")[0].value;
     }
+    // else{
+    //     longitude = "0"
+    // }
     for(var i =1 ;i<document.querySelectorAll(".longitude_val").length;i++){
         if(document.querySelectorAll(".longitude_val")[i]&& document.querySelectorAll(".longitude_val")[i].value !=""){
             longitude+=","+document.querySelectorAll(".longitude_val")[i].value
@@ -296,6 +308,9 @@ $("#mySignUpForm").on("submit",function(){
     }
     if(document.querySelectorAll(".latitude_val")[0].value!=""){
      latitude = document.querySelectorAll(".latitude_val")[0].value;}
+    //  else{
+    //     latitude = "0"
+    // }
     for(var i =1 ;i<document.querySelectorAll(".latitude_val").length;i++){
         if(document.querySelectorAll(".latitude_val")[i]&& document.querySelectorAll(".latitude_val")[i].value !=""){
             latitude+=","+document.querySelectorAll(".latitude_val")[i].value
@@ -305,6 +320,9 @@ $("#mySignUpForm").on("submit",function(){
 
      height = document.querySelectorAll(".height_val")[0].value;
     }
+    // else{
+    //     height = "0"
+    // }
     for(var i =1 ;i<document.querySelectorAll(".height_val").length;i++){
         if(document.querySelectorAll(".height_val")[i]&& document.querySelectorAll(".height_val")[i].value !=""){
             latitude+=","+document.querySelectorAll(".height_val")[i].value
@@ -317,7 +335,7 @@ $("#mySignUpForm").on("submit",function(){
     "headers": {
         "Content-Type": "application/json"
     },
-    "data": JSON.stringify({"signup":[document.getElementById("fname").value,document.getElementById("lname").value,document.getElementById("email").value,document.getElementById("shipping").value,document.getElementById("address1").value,document.getElementById("address2").value,,document.getElementById("city").value,,document.getElementById("state").value,,document.getElementById("country").value,address,city,state,country,longitude,latitude,height]}),
+    "data": JSON.stringify({"signup":[document.getElementById("fname").value,document.getElementById("lname").value,document.getElementById("email").value,document.getElementById("number").value,document.getElementById("shipping").value,document.getElementById("address1").value,document.getElementById("address2").value,,document.getElementById("city").value,,document.getElementById("state").value,,document.getElementById("country").value,address,city,state,country,longitude,latitude,height]}),
     };
 
     $.ajax(settings).done(function (response) {
