@@ -14,6 +14,9 @@
     -webkit-appearance: none; 
      margin: 0; 
 }
+#submit:disabled {
+opacity: 0.5;
+}
 </style>
 </head>
 
@@ -27,7 +30,7 @@
                         <h2 class="mt-5" id="staticBackdropLabel">Sign Up</h2>
                     </div>
                 </div>
-            <form action="javascript:void(0)" onsubmit="submit_form()" >
+            <form action="javascript:void(0)"  id="mySignUpForm" >
                 <div class="row">
                     <div class="col-md-6">
                         <div class="detail-1">
@@ -90,7 +93,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
-                                        <input type="text" class="w-100 form-control address" id="address1"
+                                        <input type="text" class="w-100 form-control" id="address1"
                                             placeholder="Address Line 1" name="address1">
                                     </div>
                                 </div>
@@ -176,7 +179,7 @@
                             </div>    
                         </div>
                             <div class="form-group">
-                                <button class="nav-link padding-10 contact-us mt-4 mb-4 text-center"  type="submit">Submit</button>
+                                <button class="nav-link padding-10 contact-us mt-4 mb-4 text-center"  id="submit" type="submit">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -186,21 +189,21 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+    
 function counter_form(a){
     if(a.value <= 0){
         return false;
     }
     var temp = a.value
-$(".address").html(""); 
+$(".address").empty(); 
  for(var i=1 ; i<=temp;i++){
-    //  console.log('a')
 $(".address").append(`
 
 <div class="form ">
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
                                         <input type="text" class="w-100 form-control address_val" id="address_`+i+`"
-                                            placeholder="Address Line `+i+`" name="address_`+i+`" >
+                                            placeholder="Address Line `+i+`" name="address_`+i+`" required >
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -239,73 +242,92 @@ $(".address").append(`
                                             placeholder="Height/Floor#" name="height`+i+`" step="any">
                                     </div>
                                 </div>
-                            </div>    `)
+                            </div>    `);
  }
 }
-function submit_form(){
-    var address = document.querySelectorAll(".address_val")[0].value;
+$("#mySignUpForm").on("submit",function(){
+    var formValues = $("#mySignUpForm").serialize();
+    // console.log(formValues);
+    var address,state,country,city,longitude,latitude,height;
+    if(document.querySelectorAll(".address_val")[0].value!=""){
+        address = document.querySelectorAll(".address_val")[0].value;
+    }    
     for(var i =1 ;i<document.querySelectorAll(".address_val").length;i++){
-        if(document.querySelectorAll(".address_val")[i] && document.querySelectorAll(".address_val")[i].value !=""){    
-            document.querySelectorAll(".address_val")[i].required = false;
+        if(document.querySelectorAll(".address_val")[i] && document.querySelectorAll(".address_val")[i].value !=""){       
         address+=","+document.querySelectorAll(".address_val")[i].value
+    
     }
-    else{
-        document.querySelectorAll(".address_val")[i].required = true;
-         document.querySelector("form").submit();
-           return;
+    
+    
     }
+    if(document.querySelectorAll(".state_val")[0].value!=""){
+ state = document.querySelectorAll(".state_val")[0].value;
     }
-    var state = document.querySelectorAll(".state_val")[0].value;
     for(var i =1 ;i<document.querySelectorAll(".state_val").length;i++){
         if(document.querySelectorAll(".state_val")[i]&& document.querySelectorAll(".state_val")[i].value !=""){
+
         state+=","+document.querySelectorAll(".state_val")[i].value
         }
     }
-    var city = document.querySelectorAll(".city_val")[0].value;
+    if(document.querySelectorAll(".city_val")[0].value!=""){
+
+ city = document.querySelectorAll(".city_val")[0].value;
+    }
     for(var i =1 ;i<document.querySelectorAll(".city_val").length;i++){
         if(document.querySelectorAll(".city_val")[i]&& document.querySelectorAll(".city_val")[i].value !=""){
         city+=","+document.querySelectorAll(".city_val")[i].value
         }
     }
-    var country = document.querySelectorAll(".country_val")[0].value;
+    if(document.querySelectorAll(".country_val")[0].value!=""){
+     country = document.querySelectorAll(".country_val")[0].value;
+    }
     for(var i =1 ;i<document.querySelectorAll(".country_val").length;i++){
         if(document.querySelectorAll(".country_val")[i]&& document.querySelectorAll(".country_val")[i].value !=""){
             country+=","+document.querySelectorAll(".country_val")[i].value
         }
     }
-
-    var longitude = document.querySelectorAll(".longitude_val")[0].value;
+    if(document.querySelectorAll(".longitude_val")[0].value!=""){
+    longitude = document.querySelectorAll(".longitude_val")[0].value;
+    }
     for(var i =1 ;i<document.querySelectorAll(".longitude_val").length;i++){
         if(document.querySelectorAll(".longitude_val")[i]&& document.querySelectorAll(".longitude_val")[i].value !=""){
             longitude+=","+document.querySelectorAll(".longitude_val")[i].value
         }
     }
-    var latitude = document.querySelectorAll(".latitude_val")[0].value;
+    if(document.querySelectorAll(".latitude_val")[0].value!=""){
+     latitude = document.querySelectorAll(".latitude_val")[0].value;}
     for(var i =1 ;i<document.querySelectorAll(".latitude_val").length;i++){
         if(document.querySelectorAll(".latitude_val")[i]&& document.querySelectorAll(".latitude_val")[i].value !=""){
             latitude+=","+document.querySelectorAll(".latitude_val")[i].value
         }
     }
+    if(document.querySelectorAll(".height_val")[0].value!=""){
 
-    var height = document.querySelectorAll(".height_val")[0].value;
+     height = document.querySelectorAll(".height_val")[0].value;
+    }
     for(var i =1 ;i<document.querySelectorAll(".height_val").length;i++){
         if(document.querySelectorAll(".height_val")[i]&& document.querySelectorAll(".height_val")[i].value !=""){
             latitude+=","+document.querySelectorAll(".height_val")[i].value
         }
     }
-var settings = {
-  "url": "https://hifari2020.herokuapp.com/signup",
-  "method": "POST",
-  "timeout": 0,
-  "headers": {
-    "Content-Type": "application/json"
-  },
-  "data": JSON.stringify({"signup":[document.getElementById("fname").value,document.getElementById("lname").value,document.getElementById("email").value,document.getElementById("shipping").value,document.getElementById("address1").value,document.getElementById("address2").value,,document.getElementById("city").value,,document.getElementById("state").value,,document.getElementById("country").value,address,city,state,country,longitude,latitude,height]}),
-};
+    var settings = {
+    "url": "https://hifari2020.herokuapp.com/signup",
+    "method": "POST",
+    "timeout": 0,
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "data": JSON.stringify({"signup":[document.getElementById("fname").value,document.getElementById("lname").value,document.getElementById("email").value,document.getElementById("shipping").value,document.getElementById("address1").value,document.getElementById("address2").value,,document.getElementById("city").value,,document.getElementById("state").value,,document.getElementById("country").value,address,city,state,country,longitude,latitude,height]}),
+    };
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
+    $.ajax(settings).done(function (response) {
+        window.location.href="signup_submit.html"
+    });
 });
+function submit_form(){
+    var formValues = $("#mySignUpForm").serialize();
+    console.log(formValues);
+
 }
 </script>
 </body>
