@@ -304,14 +304,14 @@ $("#mySignUpForm").on("submit",function(){
     }
     if(document.querySelectorAll(".zipcode_val")[0].value!=""){
 
-city = document.querySelectorAll(".zipcode_val")[0].value;
+zipcode = document.querySelectorAll(".zipcode_val")[0].value;
    }
    // else{
    //     city = "-"
    // }
    for(var i =1 ;i<document.querySelectorAll(".zipcode_val").length;i++){
        if(document.querySelectorAll(".zipcode_val")[i]&& document.querySelectorAll(".zipcode_val")[i].value !=""){
-       city+=","+document.querySelectorAll(".zipcode_val")[i].value
+       zipcode+=","+document.querySelectorAll(".zipcode_val")[i].value
        }
    }
 
@@ -366,7 +366,7 @@ city = document.querySelectorAll(".zipcode_val")[0].value;
     "headers": {
         "Content-Type": "application/json"
     },
-    "data": JSON.stringify({"signup":[document.getElementById("fname").value,document.getElementById("lname").value,document.getElementById("email").value,document.getElementById("number").value,document.getElementById("counter").value,document.getElementById("shipping").value,document.getElementById("address1").value,document.getElementById("address2").value,document.getElementById("city").value,document.getElementById("zipcode").value,document.getElementById("state").value,document.getElementById("country").value,address,city,state,country,longitude,latitude,height]}),
+    "data": JSON.stringify({"signup":[document.getElementById("fname").value,document.getElementById("lname").value,document.getElementById("email").value,document.getElementById("number").value,document.getElementById("counter").value,document.getElementById("shipping").value,document.getElementById("address1").value,document.getElementById("address2").value,document.getElementById("city").value,document.getElementById("zipcode").value,document.getElementById("state").value,document.getElementById("country").value,address,city,zipcode,state,country,longitude,latitude,height]}),
     };
 
     $.ajax(settings).done(function (response) {
