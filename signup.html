@@ -111,6 +111,12 @@ opacity: 0.5;
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
+                                        <input type="text" class="w-100 form-control" id="zipcode"
+                                            placeholder="Zip Code" name="zipcode">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12 prl-0">
                                         <input type="text" class="w-100 form-control" id="state"
                                             placeholder="State" name="state">
                                     </div>
@@ -144,6 +150,12 @@ opacity: 0.5;
                                     <div class="col-sm-12 prl-0">
                                         <input type="text" class="w-100 form-control city_val" id="city2"
                                             placeholder="City" name="city2">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12 prl-0">
+                                        <input type="text" class="w-100 zipcode_val form-control" id="zipcode2"
+                                            placeholder="Zip Code" name="zipcode_2">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -220,6 +232,12 @@ $(".address").append(`
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 prl-0">
+                                        <input type="text" class="w-100 zipcode_val form-control" id="zipcode`+i+`"
+                                            placeholder="Zip Code" name="zipcode`+i+`">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12 prl-0">
                                         <input type="text" class="w-100 form-control country_val" id="country_`+i+`"
                                             placeholder="Country" name="country_`+i+`" >
                                     </div>
@@ -248,7 +266,7 @@ $(".address").append(`
 $("#mySignUpForm").on("submit",function(){
     var formValues = $("#mySignUpForm").serialize();
     // console.log(formValues);
-    var address,state,country,city,longitude,latitude,height;
+    var address,state,country,city,longitude,latitude,height,zipcode;
     if(document.querySelectorAll(".address_val")[0].value!=""){
         address = document.querySelectorAll(".address_val")[0].value;
     }    
@@ -284,6 +302,19 @@ $("#mySignUpForm").on("submit",function(){
         city+=","+document.querySelectorAll(".city_val")[i].value
         }
     }
+    if(document.querySelectorAll(".zipcode_val")[0].value!=""){
+
+city = document.querySelectorAll(".zipcode_val")[0].value;
+   }
+   // else{
+   //     city = "-"
+   // }
+   for(var i =1 ;i<document.querySelectorAll(".zipcode_val").length;i++){
+       if(document.querySelectorAll(".zipcode_val")[i]&& document.querySelectorAll(".zipcode_val")[i].value !=""){
+       city+=","+document.querySelectorAll(".zipcode_val")[i].value
+       }
+   }
+
     if(document.querySelectorAll(".country_val")[0].value!=""){
      country = document.querySelectorAll(".country_val")[0].value;
     }
@@ -335,7 +366,7 @@ $("#mySignUpForm").on("submit",function(){
     "headers": {
         "Content-Type": "application/json"
     },
-    "data": JSON.stringify({"signup":[document.getElementById("fname").value,document.getElementById("lname").value,document.getElementById("email").value,document.getElementById("number").value,document.getElementById("shipping").value,document.getElementById("address1").value,document.getElementById("address2").value,,document.getElementById("city").value,,document.getElementById("state").value,,document.getElementById("country").value,address,city,state,country,longitude,latitude,height]}),
+    "data": JSON.stringify({"signup":[document.getElementById("fname").value,document.getElementById("lname").value,document.getElementById("email").value,document.getElementById("number").value,document.getElementById("shipping").value,document.getElementById("address1").value,document.getElementById("address2").value,document.getElementById("city").value,document.getElementById("zipcode").value,document.getElementById("state").value,document.getElementById("country").value,address,city,state,country,longitude,latitude,height]}),
     };
 
     $.ajax(settings).done(function (response) {
