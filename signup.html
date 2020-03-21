@@ -204,6 +204,7 @@ opacity: 0.5;
     
 function counter_form(a){
     if(a.value <= 0){
+        document.getElementById("counter").value = 1;
         return false;
     }
     var temp = a.value
